@@ -1,18 +1,63 @@
 @charset "utf-8";
 
 body {
-  background: #d4d4d4 url("../images/background.png");
-  text-align: center;
-  font-family: sans-serif; }
+  background: #555;
+  font-family: "Arial", sans-serif; 
+  padding:20px;
+}
 
-h1 {
-  color: rgba(0, 0, 0, .3);
+/* index page */
+
+#intro{
+  padding:20px;
+}
+
+#intro h1 {
+  color: rgba(0, 0, 0, .5);
   font-weight: bold;
   font-size: 32px;
   letter-spacing: -1px;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  background: url("../images/middleman.png") no-repeat center 100px;
-  padding: 50px 0 10px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .3);
+  padding: 0;
   margin: 0; 
 }
+
+.logo{
+margin-left:20px;
+}
+
+#logo, #events{
+  float:left;
+}
+
+#events {
+  margin-left:20%;
+  color: #222;
+  padding:5px 30px 30px 30px;
+  background-color: rgb(226, 102, 0);
+  border-radius:5px;
+  box-shadow:3px 3px 10px #333;
+}
+
+#event-details a{
+  font-size:1.25em;
+  text-decoration:none;
+  color: #333;
+}
+
+#event-details a:hover{
+  text-decoration:underline;
+}
+
+#events li{
+  list-style-type:none;
+}
+
+
+#events h2{
+  text-align:center;
+  color: #fff;
+}
+
+
