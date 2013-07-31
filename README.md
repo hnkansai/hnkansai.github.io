@@ -1,4 +1,4 @@
-HN-Kansai
+Hacker News Kansai
 =========
 
-Hacker News Kansai
+
