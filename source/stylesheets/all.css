@@ -3,9 +3,14 @@
 body {
   background: #555;
   font-family: "Arial", sans-serif; 
-  padding:20px;
 }
 
+section {
+  float:left;
+  width:100%;
+  clear:both;
+
+}
 /* index page */
 
 #intro{
@@ -32,7 +37,7 @@ margin-left:20px;
 }
 
 #events {
-  margin-left:20%;
+  margin-left:15%;
   color: #222;
   padding:5px 30px 30px 30px;
   background-color: rgb(226, 102, 0);
@@ -59,5 +64,20 @@ margin-left:20px;
   text-align:center;
   color: #fff;
 }
+
+#about {
+  background-color:#fff;
+  margin-top:2em;
+}
+
+#about-us {
+  width:40%;
+  padding:10px 20px;
+  line-height:1.5em;
+  text-align:center;
+  margin:auto;
+}
+
+
 
 
