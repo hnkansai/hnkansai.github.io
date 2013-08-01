@@ -28,24 +28,43 @@ $(document).ready(function(){
   });
 
 
-  $.ajax({
+  var listData= {
+    format: 'json',
+    method: 'flickr.photosets.getList',
+    user_id: '99688089@N06',
+    api_key: '72a77248081016485a20c2b18c9c50ee'
+  }
+
+  var fetchPhotoSets = callFlickr(listData,function(data){
+    var setsArray = data.photosets.photoset;
+    for(var i=0;i<setsArray.length;i++){
+      var photoData = {
+        format: 'json',
+        method: 'flickr.photosets.getPhotos',
+        user_id: '99688089@N06',
+        photoset_id: setsArray[i].id,
+        api_key: '72a77248081016485a20c2b18c9c50ee'
+      }
+      callFlickr(photoData, function(data){
+        console.log(data);
+      });
+    }
+  });
+
+});
+
+function callFlickr(data, callback){
+   $.ajax({
       type: "GET",
       url: "http://api.flickr.com/services/rest/",
-      data: {
-        format: 'json',
-        method: 'flickr.photosets.getList',
-        user_id: '99688089@N06',
-        api_key: '72a77248081016485a20c2b18c9c50ee'
-      },
+      data: data,
       dataType: 'jsonp',
       jsonp: 'jsoncallback',
       success: function(data){
-        console.log(data);
+        callback(data);
       }
-    });
-  });
-
-
+ });
+}
 
 
 function formatDate(date){
