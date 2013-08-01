@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
   
-
+  //Doorkeeper API Call to fetch current events
   $.ajax({
     type: "GET",
     url: "http://api.doorkeeper.jp/groups/hnkansai/events",
@@ -26,6 +26,25 @@ $(document).ready(function(){
     
     }
   });
+
+
+  $.ajax({
+      type: "GET",
+      url: "http://api.flickr.com/services/rest/",
+      data: {
+        format: 'json',
+        method: 'flickr.photosets.getList',
+        user_id: '99688089@N06',
+        api_key: '72a77248081016485a20c2b18c9c50ee'
+      },
+      dataType: 'jsonp',
+      jsonp: 'jsoncallback',
+      success: function(data){
+        console.log(data);
+      }
+    });
+  });
+
 
 
 
@@ -82,18 +101,6 @@ function formatDate(date){
 return months[month] +" "+ dayOfMonth + suffix + ", " + hour + ":" + minutes + " " + am_pm;
 
 }
-
- $.ajax({
-    type: "GET",
-    url:  "https://gdata.youtube.com/feeds/api/users/UCbxKJC9zZJ9C7YDYuZ3m59Q/uploads?alt=json-in-script&callback=?",
-    data: {},
-    dataType: "jsonp",
-    crossDomain: true,
-    success: function(data){
-      console.log(data);
-  }
-
-});
 
 
 
@@ -220,7 +227,7 @@ http://www.apache.org/licenses/LICENSE-2.0
       });
   });
 
-});
+
 
 
 
