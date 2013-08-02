@@ -26,7 +26,7 @@ section h2{
 #photos h3{
   text-align:center;
   text-transform: uppercase;
-  padding-top: 40px;
+  padding-top:15px;
   color: rgba(0, 0, 0, .5);
   text-shadow: 0 1px 0 rgba(255, 255, 255, .2);
 }
@@ -83,6 +83,9 @@ margin-left:20px;
 #events h2{
   text-align:center;
   color: #fff;
+  text-shadow:none;
+  text-transform: none;
+  letter-spacing:0;
 }
 
 #about {
@@ -158,6 +161,19 @@ margin-left:20px;
 #galleries{
   max-width: 1080px;
   margin:auto;
+}
+
+/*Social*/
+
+
+#social-links {
+  width:400px;
+  margin:auto;
+  text-align:center;
+}
+
+#social-links span a{
+  text-decoration:none;
 }
 
 
