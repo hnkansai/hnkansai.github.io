@@ -1,8 +1,9 @@
 @charset "utf-8";
 
 body {
-  background: #555;
+  background: #fff;
   font-family: "Arial", sans-serif; 
+  color: rgba(0, 0, 0, .7);
 }
 
 section {
@@ -13,38 +14,36 @@ section {
 }
 
 section h2{
-  color: rgba(0, 0, 0, .5);
   font-weight: bold;
   font-size: 30px;
   letter-spacing: -1px;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .2);
   padding: 0;
   text-align:center;
 }
 
 #photos h3{
   text-align:center;
-  text-transform: uppercase;
   padding-top:15px;
-  color: rgba(0, 0, 0, .5);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .2);
+  
 }
 /* index page */
 
 #intro{
+
+  background-color:#333;
+  padding-bottom:10px;
   
 }
 
 #intro h1 {
-  color: rgba(0, 0, 0, .5);
   font-weight: bold;
   font-size: 32px;
-  letter-spacing: -1px;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .3);
   padding: 0;
   margin: 0; 
+  color:rgba(0,0,0,.6);
+  text-shadow: 1px 1px 0 rgba(255,255,255,.2);
 }
 
 #logo{
@@ -60,7 +59,6 @@ margin-left:40px;
   margin-left:15%;
   width:40%;
   color: #222;
-  padding:5px 30px 30px 30px;
   background-color: rgb(226, 102, 0);
   border-radius:5px;
   box-shadow:3px 3px 10px #333;
@@ -78,6 +76,7 @@ margin-left:40px;
 
 #events li{
   list-style-type:none;
+  padding-bottom:10px;
 }
 
 #events h2{
@@ -117,30 +116,30 @@ margin-left:40px;
   height: 350px;
   padding:5px 10px;
   cursor:pointer;
-  background: rgba(0, 0, 0, .3);
   overflow: auto;
   position: absolute;
   right: 5%;
   z-index: 3;
 }
 
+.carousel{
+  border:1px solid #aaa;
+}
+
 .youtube .thumbnail {
     margin: 2px 8px 0 2px;
     width: 100px;
-    border: 1px solid black;
 }
 
 .youtube iframe.player {
     width: 60%;
     height: 350px;  
     overflow: auto;
-    border: 0;
     padding:5px;
+    border:0;
   
 }
 .yt-descript {
-    color: rgba(255, 255, 255, .5);  
-    text-shadow: 0px 1px rgba(0,0,0,.7);
     display:block;
     height:100px;
     margin-left:20px;
