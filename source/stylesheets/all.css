@@ -140,6 +140,21 @@ margin-left:20px;
     height:100px;
 }
 
+/*Flickr photos */
+
+.photo-set{
+  display:inline-block;
+}
+.photo-set img {
+  display:none;
+}
+
+.photo-set img:nth-of-type(1){
+display:block;
+padding:0 20px;
+
+}
+
 
 
 

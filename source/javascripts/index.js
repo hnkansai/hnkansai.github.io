@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
-  
+    var photoSets = new Object();
+    var photoArray = new Object();
+
   //Doorkeeper API Call to fetch current events
   $.ajax({
     type: "GET",
@@ -36,33 +38,52 @@ $(document).ready(function(){
     api_key: '72a77248081016485a20c2b18c9c50ee'
   }
   var fetchPhotoSets = callFlickr(listData,function(data){
-    console.log(data);
-    var setsArray = data.photosets.photoset;
-    for(var i=0;i<setsArray.length;i++){
+    var sets = data.photosets.photoset;
+      for(var i=0;i<sets.length;i++){
+        var photoSetId = sets[i].id;
+        var photoSetTitle = sets[i].title._content;
+        var containerDiv = $('<div/>').attr("id", photoSetTitle).attr("class", "photo-set").attr('data-id', photoSetId);
+        var primaryLink = "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_n.jpg"
+        var primaryPhoto = $('<img/>').attr("src", primaryLink); 
+        var title = $('<h2/>').append(photoSetTitle);
+        
+        containerDiv.append(primaryPhoto);
+        containerDiv.append(title);
+
+        $('#galleries').append(containerDiv);
+
+        photoSets[i] = photoSetId;
+     
+     }
+     lazyLoadPhotos();
+   });
+
+function lazyLoadPhotos(){    
+  for (var id in photoSets){
+    if (photoSets.hasOwnProperty(id)){
       var photoData = {
         format: 'json',
         method: 'flickr.photosets.getPhotos',
         user_id: '99688089@N06',
-        photoset_id: setsArray[i].id,
+        photoset_id: photoSets[id],
         api_key: '72a77248081016485a20c2b18c9c50ee'
       }
-      var photoSetTitle = setsArray[i].title._content;
-      callFlickr(photoData, function(data){
+           
+      callFlickr(photoData,function(data){
+       
+        console.log(data);
         var photos = data.photoset.photo
-        var containerDiv = $('<div/>').attr("id", photoSetTitle);
-        for(var j=0;j<photos.length;j++){
-          var link = "http://farm"+photos[j].farm+".staticflickr.com/"+photos[j].server+"/"+photos[j].id+"_"+photos[j].secret+"_z.jpg"
+        var galleryDiv = $('*[data-id="'+data.photoset.id+'"]');
+        console.log(galleryDiv);
+        for(var j=1;j<photos.length;j++){
+          var link = "http://farm"+photos[j].farm+".staticflickr.com/"+photos[j].server+"/"+photos[j].id+"_"+photos[j].secret+"_n.jpg"
           var photo = $('<img/>').attr("src", link); 
-          containerDiv.append(photo);
+          galleryDiv.append(photo);
         }
-        $('#galleries').append(containerDiv);
       });
     }
-   });
-
-});
-
-
+  }
+}
 
 
 function callFlickr(data, callback){
@@ -263,5 +284,6 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 
 
+});
 
 
