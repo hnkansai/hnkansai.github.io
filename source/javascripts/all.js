@@ -1,2 +1,2 @@
-//= require_tree .
+//= require index
 

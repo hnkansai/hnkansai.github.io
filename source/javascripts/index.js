@@ -1,3 +1,5 @@
+//= require fancybox
+//= require fancybox-media
 
 $(document).ready(function(){
     var photoSets = new Object();
@@ -42,13 +44,26 @@ $(document).ready(function(){
       for(var i=0;i<sets.length;i++){
         var photoSetId = sets[i].id;
         var photoSetTitle = sets[i].title._content;
-        var containerDiv = $('<div/>').attr("id", photoSetTitle).attr("class", "photo-set").attr('data-id', photoSetId);
-        var primaryLink = "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_n.jpg"
-        var primaryPhoto = $('<img/>').attr("src", primaryLink); 
-        var title = $('<h2/>').append(photoSetTitle);
-        
-        containerDiv.append(primaryPhoto);
+        var containerDiv = $('<div/>').attr("id", photoSetTitle).attr({
+                                                      class: "photo-set",
+                                                      'data-id': photoSetId
+                                                    });
+        var primaryImgSrc = "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_n.jpg"
+        var primaryImg = $('<img/>').attr("src", primaryImgSrc);
+        var primaryImgLrg =  "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_z.jpg"
+        var title = $('<h3/>').append(photoSetTitle);
+       
+        var a = $('<a/>').attr({
+          class: 'fancybox',
+          rel: photoSetId,
+          href: primaryImgLrg
+        });
+
+        a.append(primaryImg);
+
         containerDiv.append(title);
+        containerDiv.append(a);
+        
 
         $('#galleries').append(containerDiv);
 
@@ -76,9 +91,14 @@ function lazyLoadPhotos(){
         var galleryDiv = $('*[data-id="'+data.photoset.id+'"]');
         console.log(galleryDiv);
         for(var j=1;j<photos.length;j++){
-          var link = "http://farm"+photos[j].farm+".staticflickr.com/"+photos[j].server+"/"+photos[j].id+"_"+photos[j].secret+"_n.jpg"
-          var photo = $('<img/>').attr("src", link); 
-          galleryDiv.append(photo);
+          var imgSrc = "http://farm"+photos[j].farm+".staticflickr.com/"+photos[j].server+"/"+photos[j].id+"_"+photos[j].secret+"_z.jpg"
+           var a = $('<a/>').attr({
+            class: 'fancybox',
+            rel: data.photoset.id,
+            href: imgSrc
+          });
+            galleryDiv.append(a);
+
         }
       });
     }
@@ -283,7 +303,9 @@ http://www.apache.org/licenses/LICENSE-2.0
   });
 
 
-
+  $(".fancybox").fancybox({
+ 
+  });
 });
 
 
