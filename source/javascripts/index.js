@@ -28,14 +28,15 @@ $(document).ready(function(){
   });
 
 
+  //Flickr API calls
   var listData= {
     format: 'json',
     method: 'flickr.photosets.getList',
     user_id: '99688089@N06',
     api_key: '72a77248081016485a20c2b18c9c50ee'
   }
-
   var fetchPhotoSets = callFlickr(listData,function(data){
+    console.log(data);
     var setsArray = data.photosets.photoset;
     for(var i=0;i<setsArray.length;i++){
       var photoData = {
@@ -45,13 +46,24 @@ $(document).ready(function(){
         photoset_id: setsArray[i].id,
         api_key: '72a77248081016485a20c2b18c9c50ee'
       }
+      var photoSetTitle = setsArray[i].title._content;
       callFlickr(photoData, function(data){
-        console.log(data);
+        var photos = data.photoset.photo
+        var containerDiv = $('<div/>').attr("id", photoSetTitle);
+        for(var j=0;j<photos.length;j++){
+          var link = "http://farm"+photos[j].farm+".staticflickr.com/"+photos[j].server+"/"+photos[j].id+"_"+photos[j].secret+"_z.jpg"
+          var photo = $('<img/>').attr("src", link); 
+          containerDiv.append(photo);
+        }
+        $('#galleries').append(containerDiv);
       });
     }
-  });
+   });
 
 });
+
+
+
 
 function callFlickr(data, callback){
    $.ajax({
@@ -62,6 +74,9 @@ function callFlickr(data, callback){
       jsonp: 'jsoncallback',
       success: function(data){
         callback(data);
+      },
+      error: function(){
+        alert('there was a problem');
       }
  });
 }
