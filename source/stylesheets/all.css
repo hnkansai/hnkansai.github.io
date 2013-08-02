@@ -152,16 +152,14 @@ margin-left:20px;
 
 .photo-set{
   display:inline-block;
-}
-.photo-set img {
-  display:none;
+  min-width:360px;
 }
 
-.fancybox img:nth-of-type(1){
-display:block;
-padding:0 20px;
-
+#galleries{
+  max-width: 1080px;
+  margin:auto;
 }
+
 
 
 

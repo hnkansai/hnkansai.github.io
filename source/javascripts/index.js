@@ -5,31 +5,6 @@ $(document).ready(function(){
     var photoSets = new Object();
     var photoArray = new Object();
 
-  //Doorkeeper API Call to fetch current events
-  $.ajax({
-    type: "GET",
-    url: "http://api.doorkeeper.jp/groups/hnkansai/events",
-    data: {},
-    dataType: "jsonp",
-    crossDomain: true,
-    success: function(data){
-      var upcomingEvents = [];
-      var nextEvent;
-      var today = new Date();
-      for (var i in data) {
-        if(new Date(data[i].event.starts_at) >= today)
-        upcomingEvents.push(data[i].event)
-      }
-      upcomingEvents.sort(function(a,b){
-        return Math.abs(1 - new Date(a.starts_at) / today) - Math.abs(1 - new Date(b.starts_at) / today)
-      });
-     nextEvent = upcomingEvents[1];
-
-    var formattedDate = formatDate(new Date(nextEvent.starts_at));
-     $('#event-details').html('<a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a>');
-    
-    }
-  });
 
 
   //Flickr API calls
@@ -64,14 +39,37 @@ $(document).ready(function(){
         containerDiv.append(title);
         containerDiv.append(a);
         
-
         $('#galleries').append(containerDiv);
-
         photoSets[i] = photoSetId;
-     
      }
-     lazyLoadPhotos();
+     setTimeOut(lazyLoadPhotos(), 2000);
    });
+
+    var date = new Date();
+    var today = date.toISOString(); 
+  //Doorkeeper API Call to fetch current events
+  $.ajax({
+    type: "GET",
+    url: "http://api.doorkeeper.jp/groups/hnkansai/events?sort=starts_at&since="+today,
+    data: {},
+    dataType: "jsonp",
+    crossDomain: true,
+    success: function(data){
+      console.log(data);
+      var upcomingEvents = [];
+      var nextEvent;
+      for (var i in data) {
+    
+      upcomingEvents.push(data[i].event);
+      nextEvent = upcomingEvents[1];
+    }
+    var formattedDate = formatDate(new Date(nextEvent.starts_at));
+     $('#event-details').html('<a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a>');
+  }
+  });
+
+
+
 
 function lazyLoadPhotos(){    
   for (var id in photoSets){
@@ -304,7 +302,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 
   $(".fancybox").fancybox({
- 
+  
   });
 });
 

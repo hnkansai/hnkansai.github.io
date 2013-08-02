@@ -52,7 +52,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 # automatically reloads the site in the browser when you make changes to it. 
-activate :livereload
+#activate :livereload
 
 # Build-specific configuration
 configure :build do
