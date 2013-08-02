@@ -2,6 +2,10 @@
 //= require fancybox-media
 
 $(document).ready(function(){
+
+   
+
+
     var photoSets = new Object();
     var photoArray = new Object();
 
@@ -304,6 +308,14 @@ http://www.apache.org/licenses/LICENSE-2.0
   $(".fancybox").fancybox({
   
   });
+
+  $('.organizer').hover(function(){  
+        $(".caption", this).fadeIn('fast');  
+    }, function() {  
+        $(".caption", this).fadeOut('fast'); 
+    });
+
+
 });
 
 
