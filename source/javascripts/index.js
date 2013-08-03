@@ -182,7 +182,7 @@ return months[month] +" "+ dayOfMonth + suffix + ", " + hour + ":" + minutes + "
 
 
 /*
-Found this on jsfiddle. Here is the creator -
+Found this on jsfiddle and modified it to suit my needs. Here is the creator -
 
 Copyright 2011 : Simone Gianni <simoneg@apache.org>
 Released under The Apache License 2.0 
@@ -205,7 +205,7 @@ http://www.apache.org/licenses/LICENSE-2.0
               src += '_a=b';
           }
           ifr.attr('src', src);
-          jqe.append(ifr);
+          jqe.prepend(ifr);
       }
 
       function createCarousel(jqe, videos, options) {
@@ -213,7 +213,10 @@ http://www.apache.org/licenses/LICENSE-2.0
           if (car.length === 0) {
               car = $('<div>');
               car.addClass('carousel');
-              jqe.append(car);
+              var carouselWrap = $('<div/>');
+              carouselWrap.addClass('carousel-wrap');
+              carouselWrap.append(car)
+              jqe.append(carouselWrap);
 
           }
           $.each(videos, function(i, video) {
@@ -228,22 +231,19 @@ http://www.apache.org/licenses/LICENSE-2.0
           var img = $('img[src="' + imgurl + '"]');
           var desc;
           var container;
+          var mycontainer = $('<div/>');
+          mycontainer.addClass('thumb-container');  
           if (img.length !== 0) return;
-          img = $('<img align="left">');
+          img = $('<img/>');
           img.addClass('thumbnail');
-          jqe.append(img);
+          mycontainer.append(img);
           img.attr('src', imgurl);
           img.attr('title', video.title);
-          img.click(function() {
-              options.player(options.maindiv, video, $.extend(true, {}, options, {
-                  playopts: {
-                      autoplay: 1
-                  }
-              }));
-          });
           desk = $('<p class="yt-descript">' + video.title + '</p>');
-          jqe.append(desk);
-          desk.click(function() {
+          mycontainer.append(desk);
+          jqe.append(mycontainer);
+          
+          mycontainer.click(function() {
               options.player(options.maindiv, video, $.extend(true, {}, options, {
                   playopts: {
                       autoplay: 1
@@ -258,7 +258,14 @@ http://www.apache.org/licenses/LICENSE-2.0
           carousel: createCarousel,
           player: createPlayer,
           thumbnail: createThumbnail,
-          loaded: function() {},
+          loaded: function() {
+            var thumbs = $('.thumb-container').length;
+            var thumbWidth = $('.thumb-container:first').width() + 40;
+            var containerWidth = thumbs * thumbWidth;
+            var windowWidth = $(window).width();
+       
+            $('.carousel').width(containerWidth);
+          },
           playopts: {
               autoplay: 0,
               egm: 1,
@@ -302,6 +309,7 @@ http://www.apache.org/licenses/LICENSE-2.0
       $('#player').youTubeChannel({
           user: 'UCbxKJC9zZJ9C7YDYuZ3m59Q'
       });
+
   });
 
 
@@ -314,6 +322,7 @@ http://www.apache.org/licenses/LICENSE-2.0
     }, function() {  
         $(".caption", this).fadeOut('fast'); 
     });
+
 
 
 });
