@@ -155,7 +155,8 @@
 }
 
 .fancybox-nav:hover span {
-	visibility: visible;
+	opacity:.9;
+	
 }
 
 .fancybox-tmp {
