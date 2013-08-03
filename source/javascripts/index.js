@@ -54,7 +54,7 @@ $(document).ready(function(){
   //Doorkeeper API Call to fetch current events
   $.ajax({
     type: "GET",
-    url: "http://api.doorkeeper.jp/groups/hnkansai/events?sort=starts_at&since="+today,
+    url: "http://api.doorkeeper.jp/groups/hnkansai/events?&since="+today,
     data: {},
     dataType: "jsonp",
     crossDomain: true,
@@ -63,7 +63,6 @@ $(document).ready(function(){
       var upcomingEvents = [];
       var nextEvent;
       for (var i in data) {
-    
       upcomingEvents.push(data[i].event);
       nextEvent = upcomingEvents[1];
     }
