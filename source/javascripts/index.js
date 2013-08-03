@@ -64,7 +64,7 @@ $(document).ready(function(){
       var nextEvent;
       for (var i in data) {
       upcomingEvents.push(data[i].event);
-      nextEvent = upcomingEvents[1];
+      nextEvent = data[0].event;
     }
     var formattedDate = formatDate(new Date(nextEvent.starts_at));
      $('#event-details').html('<a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a>');
@@ -157,6 +157,9 @@ function formatDate(date){
     suffix = "th";
   }
 
+  if (minutes == 0){
+    minutes = '00';
+  }
   //format the time into 12 hour format with proper AM PM
   if (hour < 12)
      {
