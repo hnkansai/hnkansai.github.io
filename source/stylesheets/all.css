@@ -109,9 +109,10 @@ margin-left:40px;
 
 #welcome {
   background-color:#fff;
-  margin-top:1em;
   float:left;
   border-bottom:1px solid #ccc;
+  margin-top:1em;
+  padding:0;
 }
 
 #welcome p{
