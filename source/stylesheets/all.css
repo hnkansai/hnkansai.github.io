@@ -2,7 +2,7 @@
 
 body {
   background: #fff;
-  font-family: "Arial", sans-serif; 
+  font-family: "Bitter", "Arial", sans-serif; 
   color: rgba(0, 0, 0, .7);
 }
 
@@ -21,6 +21,7 @@ section h2{
   padding: 0;
   margin-top:2em;
   text-align:center;
+
 }
 
 #photos h2{
@@ -30,6 +31,7 @@ section h2{
 #photos h3{
   text-align:center;
   padding-top:15px;
+  font-weight:normal;
   
 }
 /* index page */
@@ -106,7 +108,7 @@ margin-left:40px;
 
 #about-us {
   width:60%;
-  line-height:1.5em;
+  line-height:1.7em;
   text-align:center;
   margin:auto;
   font-size:1.2em;
@@ -134,38 +136,48 @@ margin-left:40px;
   width:100%;
   overflow-x:scroll;
   overflow-y:hidden; 
+  -webkit-box-shadow: inset 1px 1px 10px #aaa; 
+  -moz-box-shadow: inset 1px 1px 10px #aaa; 
+  box-shadow: inset 1px 1px 10px #aaa;
+  border:1px solid #ccc;
+  padding-top:10px;
+  margin-top:2em;
 }
 .carousel{
   margin-top:20px;
-  border:1px solid #aaa;
-  padding-top:10px;
 
 }
 
 .youtube .thumbnail {
     margin: 2px 8px 0 2px;
-    width: 100px;
+    width: 160px;
 }
 
 .thumb-container{
-  width:200px;
+  width:250px;
   display:inline-block;
   vertical-align:top;
   padding:20px;
   text-align:center;
 }
 .thumbnail {
+  border:1px solid #444;
+  box-shadow: 1px 1px 3px #aaa;
+  -webkit-box-shadow: 1px 1px 3px #aaa;
+  -moz-box-shadow: 1px 1px 3px #aaa;
   
 }
 
 .player {
     display:block;
-    width: 800px;
+    width: 900px;
     margin:auto;
-    height: 400px;  
+    height: 450px;  
     overflow: auto;
-    padding:5px;
-    border:0;
+    border:1px solid #444;
+    box-shadow: 1px 1px 3px #aaa;
+    -webkit-box-shadow: 1px 1px 3px #aaa;
+    -moz-box-shadow: 1px 1px 3px #aaa;
 }
 
 .yt-descript {
@@ -194,7 +206,9 @@ margin-left:40px;
 
 /*Social*/
 
-
+#social {
+  margin-top:2em;
+}
 #social-links {
   width:400px;
   margin:auto;
