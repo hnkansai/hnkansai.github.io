@@ -10,17 +10,19 @@ section {
   float:left;
   width:100%;
   clear:both;
-  padding-top:20px;
+  padding-top:2em;
+  padding-bottom:2em;
 }
 
 section h2{
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2.75em;
   letter-spacing: -1px;
   text-transform: uppercase;
   padding: 0;
-  margin-top:2em;
   text-align:center;
+  color:rgb(226, 102, 0);
+  text-shadow:1px 1px 1px rgba(0,0,0,.6);
 
 }
 
@@ -37,10 +39,13 @@ section h2{
 /* index page */
 
 #intro{
-
   background-color:#333;
   padding-bottom:10px;
-  
+  box-shadow:0px 2px 6px rgba(0,0,0,.3);
+  -webkit-box-shadow:0px 2px 6px rgba(0,0,0,.3);
+  -moz-box-shadow:0px 2px 6px rgba(0,0,0,.3);
+  margin-top:0;
+  padding-top:20px;
 }
 
 #intro h1 {
@@ -69,7 +74,6 @@ margin-left:40px;
   text-align: center;
   margin-left:15%;
   width:40%;
-  color: #222;
   background-color: rgb(226, 102, 0);
   border-radius:5px;
   box-shadow:3px 3px 10px #333;
@@ -79,7 +83,8 @@ margin-left:40px;
 #event-details a{
   font-size:1.25em;
   text-decoration:none;
-  color: #333;
+   color: rgba(255,255,255,.9);
+  text-shadow:1px 1px 1px rgba(0,0,0,.6);
 }
 
 #event-details a:hover{
@@ -93,27 +98,41 @@ margin-left:40px;
 
 #events h2{
   text-align:center;
-  color: #fff;
-  text-shadow:none;
   text-transform: none;
+  font-size:2em;
   letter-spacing:0;
   margin:20px;
+   color: rgba(255,255,255,.9);
+  text-shadow:1px 1px 1px rgba(0,0,0,.6);
 
+}
+
+#welcome {
+  background-color:#fff;
+  margin-top:1em;
+  float:left;
+  border-bottom:1px solid #ccc;
+}
+
+#welcome p{
+  padding:0;
+  margin:0;
 }
 
 #about {
-  background-color:#fff;
-  margin-top:1em;
+  width:40%;
+  line-height:1.7em;
+  float:left;
+  font-size:1.2em;
+  padding:2% 5%;
 }
 
-#about-us {
-  width:60%;
-  line-height:1.7em;
-  text-align:center;
-  margin:auto;
+#newsletter{
   font-size:1.2em;
-  border-bottom:1px solid #ccc;
-  padding-bottom:5px;
+  line-height:1.7em;
+  float:left;
+  width:40%;
+  padding:2% 5%;
 }
 
 
@@ -127,18 +146,15 @@ margin-left:40px;
   margin:auto;
 }
 
-.youtube .carousel {
-  cursor:pointer;
-  z-index: 3;
-}
-
 .carousel-wrap{
   width:100%;
   overflow-x:scroll;
   overflow-y:hidden; 
-  -webkit-box-shadow: inset 1px 1px 10px #aaa; 
-  -moz-box-shadow: inset 1px 1px 10px #aaa; 
-  box-shadow: inset 1px 1px 10px #aaa;
+  background-color:rgba(235,235,235,.5);
+
+  -webkit-box-shadow: inset 1px 1px 8px #ccc; 
+  -moz-box-shadow: inset 1px 1px 8px #ccc; 
+  box-shadow: inset 1px 1px 8px #ccc;
   border:1px solid #ccc;
   padding-top:10px;
   margin-top:2em;
@@ -151,6 +167,7 @@ margin-left:40px;
 .youtube .thumbnail {
     margin: 2px 8px 0 2px;
     width: 160px;
+    cursor:pointer;
 }
 
 .thumb-container{
@@ -182,6 +199,7 @@ margin-left:40px;
 
 .yt-descript {
     display:block;
+    cursor:pointer;
 }
 .carItemContain{
     width:;
@@ -255,10 +273,42 @@ margin-left:40px;
   color:#fff;
   text-align:center;
   text-shadow:1px 1px 1px #222;
-  margin-top:40%;
+  padding-top:1em;
   font-size:1.5em;
 }
 
+
+/*Mail Chimp*/
+#mc_embed_signup{
+  background:#fff; 
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+}
+
+#mc_embed_signup input.email{
+  width:65%;
+  float:left;
+  margin-right:2%;
+  border:1px solid #aaa;
+  border-radius:2px;
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+}
+
+#mc_embed_signup .clear {
+  clear: none;
+  display: inline;
+  float:left;
+  width:30%;
+}
+
+#mc_embed_signup form {
+  padding-left:0;
+}
+
+#mc_embed_signup input.button{
+  width:40%;
+}
 
 
 
