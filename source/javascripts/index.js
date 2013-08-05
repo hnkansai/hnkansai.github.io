@@ -46,7 +46,7 @@ $(document).ready(function(){
         $('#galleries').append(containerDiv);
         photoSets[i] = photoSetId;
      }
-     setTimeOut(lazyLoadPhotos(), 2000);
+     setTimeout(lazyLoadPhotos(), 2000);
    });
 
     var date = new Date();
@@ -59,7 +59,6 @@ $(document).ready(function(){
     dataType: "jsonp",
     crossDomain: true,
     success: function(data){
-      console.log(data);
       var upcomingEvents = [];
       var nextEvent;
       for (var i in data) {
@@ -87,10 +86,10 @@ function lazyLoadPhotos(){
            
       callFlickr(photoData,function(data){
        
-        console.log(data);
+ 
         var photos = data.photoset.photo
         var galleryDiv = $('*[data-id="'+data.photoset.id+'"]');
-        console.log(galleryDiv);
+     
         for(var j=1;j<photos.length;j++){
           var imgSrc = "http://farm"+photos[j].farm+".staticflickr.com/"+photos[j].server+"/"+photos[j].id+"_"+photos[j].secret+"_z.jpg"
            var a = $('<a/>').attr({
@@ -118,7 +117,7 @@ function callFlickr(data, callback){
         callback(data);
       },
       error: function(){
-        alert('there was a problem');
+        
       }
  });
 }
