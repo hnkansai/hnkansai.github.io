@@ -16,7 +16,7 @@ section {
 
 section h2{
   font-weight: bold;
-  font-size: 2.75em;
+  font-size: 2.5em;
   letter-spacing: -1px;
   text-transform: uppercase;
   padding: 0;
@@ -24,6 +24,10 @@ section h2{
   color:rgb(226, 102, 0);
   text-shadow:1px 1px 1px rgba(0,0,0,.6);
 
+}
+
+#photos {
+  padding-top:1em;
 }
 
 #photos h2{
@@ -122,15 +126,15 @@ margin-left:40px;
 
 #about {
   width:40%;
-  line-height:1.7em;
+  line-height:1.6em;
   float:left;
-  font-size:1.2em;
+  font-size:1em;
   padding:2% 5%;
 }
 
 #newsletter{
-  font-size:1.2em;
-  line-height:1.7em;
+  font-size:1em;
+  line-height:1.6em;
   float:left;
   width:40%;
   padding:2% 5%;
@@ -228,14 +232,14 @@ margin-left:40px;
 #social {
   margin-top:2em;
 }
+
+#social a, {
+  text-decoration:none;
+}
 #social-links {
   width:400px;
   margin:auto;
   text-align:center;
-}
-
-#social-links span a{
-  text-decoration:none;
 }
 
 #organizers{
