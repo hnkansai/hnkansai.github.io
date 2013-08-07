@@ -218,13 +218,17 @@ margin-left:40px;
   min-width:360px;
 }
 
+.photo-set a{
+  text-decoration:none;
+}
+
 #galleries{
   max-width: 1080px;
   margin:auto;
 }
 
 #galleries img{
-  border: 1px solid #333;
+  border: 1px solid #777;
 }
 
 /*Social*/
@@ -233,7 +237,7 @@ margin-left:40px;
   margin-top:2em;
 }
 
-#social a, {
+#social-links a {
   text-decoration:none;
 }
 #social-links {
