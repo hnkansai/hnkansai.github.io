@@ -209,18 +209,17 @@ http://www.apache.org/licenses/LICENSE-2.0
       }
 
       function createCarousel(jqe, videos, options) {
-          var car = $('div.carousel', jqe);
+          var car = $('div.video-carousel', jqe);
           if (car.length === 0) {
               car = $('<div>');
-              car.addClass('carousel');
+              car.addClass('video-carousel');
               var carouselWrap = $('<div/>');
               carouselWrap.addClass('carousel-wrap');
               carouselWrap.append(car)
               jqe.append(carouselWrap);
-
           }
-          $.each(videos, function(i, video) {
 
+          $.each(videos, function(i, video) {
               options.thumbnail(car, video, options);
           });
       }
@@ -264,7 +263,7 @@ http://www.apache.org/licenses/LICENSE-2.0
             var containerWidth = thumbs * thumbWidth;
             var windowWidth = $(window).width();
        
-            $('.carousel').width(containerWidth);
+            $('.video-carousel').width(containerWidth);
           },
           playopts: {
               autoplay: 0,
@@ -283,9 +282,10 @@ http://www.apache.org/licenses/LICENSE-2.0
               md.addClass('youtube-channel');
               var allopts = $.extend(true, {}, defoptions, options);
               allopts.maindiv = md;
-              $.getJSON('http://gdata.youtube.com/feeds/api/users/' + allopts.user + '/uploads?alt=json-in-script&format=5&callback=?', null, function(data) {
+              $.getJSON('http://gdata.youtube.com/feeds/api/users/' + allopts.user + '/uploads?alt=json-in-script&orderby=published&format=5&callback=?', null, function(data) {
                   var feed = data.feed;
                   var videos = [];
+                  console.log(data);
                   $.each(feed.entry, function(i, entry) {
 
                       var video = {

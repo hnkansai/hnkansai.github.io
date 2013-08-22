@@ -11,7 +11,7 @@
   background-color:#fff;
 }
 
-#welcome .container {
+.container {
   border-bottom:1px solid #ccc;
 }
 
@@ -30,18 +30,17 @@ section {
   clear:both;
   padding-top:1em;
   padding-bottom:1em;
+    h2{
+      font-weight: bold;
+      font-size: 2.5em;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      padding: 2em 0 2em 0;
+      text-align:center;
+      color:rgb(226, 102, 0);
+    }
 }
 
-section h2{
-  font-weight: bold;
-  font-size: 2.5em;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  padding: 0;
-  text-align:center;
-  color:rgb(226, 102, 0);
-  text-shadow:1px 1px 1px rgba(0,0,0,.6);
-}
 
 .inner {
   background-color:#fff;
@@ -82,6 +81,20 @@ section h2{
   }
 }
 
+#photos{
+
+    h2 {
+      padding: 1em 0 1em 0;
+    }
+}
+
+#galleries {
+
+    h3{
+      font-size:18px;
+      text-align:center;
+    }
+}
 /*Videos */
 
 
@@ -104,14 +117,11 @@ section h2{
   padding-top:10px;
   margin-top:2em;
 }
-.carousel{
-  margin-top:20px;
 
-}
 
 .youtube .thumbnail {
     margin: 2px 8px 0 2px;
-    width: 160px;
+    width: 180px;
     cursor:pointer;
 }
 
@@ -121,13 +131,18 @@ section h2{
   vertical-align:top;
   padding:20px;
   text-align:center;
+    img {
+      box-shadow: 2px 2px 6px #777;
+      -webkit-box-shadow: 2px 2px 6px #777;
+      -moz-box-shadow: 2px 2px 6px #777;
+    }
 }
 .thumbnail {
   border:1px solid #444;
   box-shadow: 1px 1px 3px #aaa;
   -webkit-box-shadow: 1px 1px 3px #aaa;
   -moz-box-shadow: 1px 1px 3px #aaa;
-  
+  padding:0;
 }
 
 .player {
@@ -143,8 +158,10 @@ section h2{
 }
 
 .yt-descript {
+    padding-top:10px;
     display:block;
     cursor:pointer;
+    width:180px;
 }
 .carItemContain{
     width:0;
@@ -169,9 +186,6 @@ section h2{
   text-align:center;
 }
 
-#organizers{
- 
-}
 .organizer{
   float:left;
   width:33.33%;
@@ -211,7 +225,7 @@ section h2{
 
 
 #organizers {
-  padding-bottom:2em;
+  padding-bottom:4em;
 }
 
 /*Mail Chimp*/
