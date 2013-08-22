@@ -1,5 +1,11 @@
+@import 'bootstrap';
+
 @charset "utf-8";
 
+
+.span4 {
+  margin-left:10px;
+}
 body {
   background: #fff;
   font-family: "Bitter", "Arial", sans-serif; 
@@ -77,15 +83,14 @@ margin-left:40px;
 #events {
   text-align: center;
   margin-left:15%;
-  width:40%;
+  min-width:40%;
   background-color: rgb(226, 102, 0);
   border-radius:5px;
   box-shadow:3px 3px 10px #333;
-  margin-top:5px;
 }
 
 #event-details a{
-  font-size:1.25em;
+  font-size:1em;
   text-decoration:none;
    color: rgba(255,255,255,.9);
   text-shadow:1px 1px 1px rgba(0,0,0,.6);
@@ -103,10 +108,9 @@ margin-left:40px;
 #events h2{
   text-align:center;
   text-transform: none;
-  font-size:2em;
+  font-size:1.5em;
   letter-spacing:0;
-  margin:20px;
-   color: rgba(255,255,255,.9);
+  color: rgba(255,255,255,.9);
   text-shadow:1px 1px 1px rgba(0,0,0,.6);
 
 }
@@ -207,7 +211,7 @@ margin-left:40px;
     cursor:pointer;
 }
 .carItemContain{
-    width:;
+    width:0;
     height:100px;
 }
 
