@@ -65,7 +65,7 @@ $(document).ready(function(){
       nextEvent = data[0].event;
     }
     var formattedDate = formatDate(new Date(nextEvent.starts_at));
-     $('#event-details').html('<a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a>');
+     $('#event-details').append('<a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a>');
   }
   });
 

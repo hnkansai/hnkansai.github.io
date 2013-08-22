@@ -3,11 +3,23 @@
 @charset "utf-8";
 
 
-.span4 {
+#photos .span4 {
   margin-left:10px;
 }
+
+#welcome, #photos, #videos, #organizers{
+  background-color:#fff;
+}
+
+#welcome .container {
+  border-bottom:1px solid #ccc;
+}
+
+
+
 body {
-  background: #fff;
+  background: #3a3531 url('/images/hnk-pattern.png');
+  background-size:88px 100px;
   font-family: "Bitter", "Arial", sans-serif; 
   color: rgba(0, 0, 0, .7);
 }
@@ -16,8 +28,8 @@ section {
   float:left;
   width:100%;
   clear:both;
-  padding-top:2em;
-  padding-bottom:2em;
+  padding-top:1em;
+  padding-bottom:1em;
 }
 
 section h2{
@@ -29,122 +41,46 @@ section h2{
   text-align:center;
   color:rgb(226, 102, 0);
   text-shadow:1px 1px 1px rgba(0,0,0,.6);
-
 }
 
-#photos {
-  padding-top:1em;
-}
+.inner {
+  background-color:#fff;
+  padding: 15px 0;
 
-#photos h2{
-  margin-bottom:0;
-}
-
-#photos h3{
-  text-align:center;
-  padding-top:15px;
-  font-weight:normal;
-  
-}
-/* index page */
-
-#intro{
-  background-color:#333;
-  padding-bottom:10px;
-  box-shadow:0px 2px 6px rgba(0,0,0,.3);
-  -webkit-box-shadow:0px 2px 6px rgba(0,0,0,.3);
-  -moz-box-shadow:0px 2px 6px rgba(0,0,0,.3);
-  margin-top:0;
-  padding-top:20px;
-}
-
-#intro h1 {
-  font-weight: bold;
-  font-size: 32px;
-  text-transform: uppercase;
-  padding: 0;
-  margin: 0; 
-  color:rgba(0,0,0,.7);
-  text-shadow: 1px 1px 0 rgba(255,255,255,.2);
-}
-
-#logo{
-margin-left:40px;
-}
-
-.logo {
-  margin-left: 25px;
-}
-
-#logo, #events{
-  float:left;
 }
 
 #events {
-  text-align: center;
-  margin-left:15%;
-  min-width:40%;
-  background-color: rgb(226, 102, 0);
-  border-radius:5px;
-  box-shadow:3px 3px 10px #333;
+    margin-top:35px;
+    h3 {
+      display:inline;
+    }
+    li { 
+      font-size:1.25em;
+      color:rgb(255,105,0);
+      display:inline;
+      text-decoration:none;
+      a {
+        padding:40px 0 40px 4px;
+        color:#fff;
+      }
+    }
 }
 
-#event-details a{
-  font-size:1em;
-  text-decoration:none;
-   color: rgba(255,255,255,.9);
-  text-shadow:1px 1px 1px rgba(0,0,0,.6);
-}
 
-#event-details a:hover{
-  text-decoration:underline;
-}
-
-#events li{
-  list-style-type:none;
-  padding-bottom:20px;
-}
-
-#events h2{
+#about{
+  padding-top:20px;
+  font-size:1.25em;
+  line-height:1.4em;
   text-align:center;
-  text-transform: none;
-  font-size:1.5em;
-  letter-spacing:0;
-  color: rgba(255,255,255,.9);
-  text-shadow:1px 1px 1px rgba(0,0,0,.6);
-
 }
 
-#welcome {
-  background-color:#fff;
-  float:left;
-  border-bottom:1px solid #ccc;
-  margin-top:1em;
-  padding:0;
+#newsletter {
+  padding-top:20px;
+  p {
+    text-align:center;
+    font-size:.9em;
+  }
 }
-
-#welcome p{
-  padding:0;
-  margin:0;
-}
-
-#about {
-  width:40%;
-  line-height:1.6em;
-  float:left;
-  font-size:1em;
-  padding:2% 5%;
-}
-
-#newsletter{
-  font-size:1em;
-  line-height:1.6em;
-  float:left;
-  width:40%;
-  padding:2% 5%;
-}
-
-
 
 /*Videos */
 
@@ -196,7 +132,7 @@ margin-left:40px;
 
 .player {
     display:block;
-    width: 900px;
+    width: 920px;
     margin:auto;
     height: 450px;  
     overflow: auto;
@@ -217,23 +153,6 @@ margin-left:40px;
 
 /*Flickr photos */
 
-.photo-set{
-  display:inline-block;
-  min-width:360px;
-}
-
-.photo-set a{
-  text-decoration:none;
-}
-
-#galleries{
-  max-width: 1080px;
-  margin:auto;
-}
-
-#galleries img{
-  border: 1px solid #777;
-}
 
 /*Social*/
 
@@ -291,38 +210,50 @@ margin-left:40px;
 }
 
 
+#organizers {
+  padding-bottom:2em;
+}
+
 /*Mail Chimp*/
 #mc_embed_signup{
-  background:#fff; 
-  clear:left; 
-  font:14px Helvetica,Arial,sans-serif; 
+ 
 }
 
 #mc_embed_signup input.email{
-  width:65%;
-  float:left;
-  margin-right:2%;
-  border:1px solid #aaa;
-  border-radius:2px;
-  -webkit-border-radius:2px;
-  -moz-border-radius:2px;
+  display:inline-block;
 }
 
+#mc_embed_signup input.email:focus {
+      box-shadow:none !important;
+      color:#333;
+    }
+
 #mc_embed_signup .clear {
-  clear: none;
-  display: inline;
-  float:left;
-  width:30%;
+ 
 }
 
 #mc_embed_signup form {
-  padding-left:0;
+
 }
 
 #mc_embed_signup input.button{
-  width:40%;
+  display:inline-block;
+  height:37px;
+  border: 1px solid #aaa;
+  background-color:#0088cc;
+}
+
+#mc_embed_signup input.button:hover{
+  background-color:#00689C;
+}
+
+#mc_embed_signup input.button:focus {
+
 }
 
 
 
 
+#footer{
+  min-height:40px;
+}

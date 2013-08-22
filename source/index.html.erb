@@ -1,105 +1,99 @@
 ---
 title: Hacker News Kansai
 ---
-<div class="container">
   <section id = "intro">
-    <div id="logo">
-    <%= image_tag 'hn-logo.png', :width => '300', :class => 'logo'%>
-    </div>
-    <div id= "events">
-      <h2>Next Event</h2>
-      <li id = "event-details"></li>
+    <div class = "container">
+      <div class = "row-fluid">
+        <span id="logo" class = "span4">
+          <%= image_tag 'hn-logo.png', :width => '300', :class => 'logo'%>
+        </span>
+        <span id= "events" class = "span7 offset1">
+          <li id = "event-details">Next Event: </li>
+        </span>
+      </div>
     </div>
   </section>
 
   <section id = "welcome">
-    <div id = "about">
-        <p>
-          HNKansai is a meetup based around <%= link_to 'Hacker News', 'http://news.ycombinator.com' %>.
-          Every month, we get together in Kyoto, Osaka, or Kobe to talk about technology, design, games, and startups. Come join us!
-        </p>
-    </div>
-    <div id="newsletter">
-        <p> Subscribe to our newsletter to stay up to date with upcoming events and other news.</p>
-        <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup">
-        <form action="http://fajitanachos.us6.list-manage.com/subscribe/post?u=2ab6d042c537ad6da617f47a3&amp;id=aefb12e09b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          
-          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-          <div class="clear">
-            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-          </div>
-        </form>
+    <div class = "container">
+      <div class = "row-fluid">
+        <span id = "about" class = "span6 offset3">
+            <p>
+              HNKansai is a meetup based around <%= link_to 'Hacker News', 'http://news.ycombinator.com' %>.
+              Every month, we get together in Kyoto, Osaka, or Kobe to talk about technology, design, games, and startups. Come join us!
+            </p>
+        </span>
+        <div class = "row-fluid">
+          <span id="newsletter" class = "span6 offset3">
+              <p> Sign up to be notified about upcoming events and other news.</p>
+              <!-- Begin MailChimp Signup Form -->
+              <div id="mc_embed_signup">
+              <form action="http://fajitanachos.us6.list-manage.com/subscribe/post?u=2ab6d042c537ad6da617f47a3&amp;id=aefb12e09b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                <div class="clear">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </div>
+              </form>
+              </div>
+              <!--End mc_embed_signup-->
+          </span>
         </div>
-        <!--End mc_embed_signup-->
+      </div>
     </div>
   </section>
 
   <section id = "photos">
-    <h2> Photos </h2>
-    <div id = "galleries">
-
+    <div class = "container">
+      <div class = "row-fluid">
+        <h2> Photos </h2>
+        <div id = "galleries">
+      </div>
     </div>
-
   </section>
 
   <section id = "videos">
-    <h2>Videos</h2>
-   <div id="player">
-   </div>
+    <div class = "container">
+      <div class = "row-fluid">
+         <h2>Videos</h2>
+          <div id="player">
+          </div>
+        </div>
+    </div>
   </section>
 
   <section id = "organizers">
-    <h2>Organizers</h2>
-    <div id = "Sacha" class = "organizer">
-      <%= image_tag 'sacha.jpg', :class => 'profile-pic'  %>
-      <div class = "caption">
-        <h3>Sacha Greif </h3>
-        <li><a href="http://sachagreif.com">
-      </div>
-    </div>
+    <div class = "container">
+      <div id = "row-fluid">
+      <h2>Organizers</h2>
+      <span id = "Sacha" class = "organizer">
+        <%= image_tag 'sacha.jpg', :class => 'profile-pic'  %>
+        <div class = "caption">
+          <h3>Sacha Greif </h3>
+          <li><a href="http://sachagreif.com">
+        </div>
+      </span>
 
-    <div id = "Raphael" class = "organizer">
-      <%= image_tag 'raphael.jpg', :class => 'profile-pic'  %>
-     <div class = "caption">
-        <h3>Raphael Guyot </h3>
-      </div>
+      <span id = "Raphael" class = "organizer">
+        <%= image_tag 'raphael.jpg', :class => 'profile-pic'  %>
+       <div class = "caption">
+          <h3>Raphael Guyot </h3>
+        </div>
+      </span>
+      
+      <span id ="Paco" class = "organizer">
+        <%= image_tag 'paco.jpg', :class => 'profile-pic'  %>
+        <div class = "caption">
+          <h3>Francisco 'Paco' Alcantara</h3>
+        </div>
+      </span>
+     </div>
     </div>
-    
-    <div id ="Paco" class = "organizer">
-      <%= image_tag 'paco.jpg', :class => 'profile-pic'  %>
-      <div class = "caption">
-        <h3>Francisco 'Paco' Alcantara</h3>
-      </div>
-    </div>
-   
   </section>
 
-     <section id = "social">
-    <div id="social-links">
-      <span id="twitter" class = "social">
-      <% link_to 'http://twitter.com/hnkansai' do %>
-        <%= image_tag 'twitter.png', :class => 'social-icon'  %>
-      <% end %>
-      </span>
-      <span id= "facebook" class = "social">
-       <% link_to 'http://facebook.com/groups/hnkansai' do %>
-        <%= image_tag 'facebook.png', :class => 'social-icon'  %>
-      <% end %>
-      </span>
-      <span id = "flickr">
-       <% link_to 'http://flickr.com/hnkansai' do %>
-        <%= image_tag 'flickr.png', :class => 'social-icon'  %>
-      <% end %>
-      </span>
-    </div>
-  </div>
+  <section id = "footer">
 
   </section>
-  <section id = "sponsers">
-  
-  </section>
-
  
 
 </div>
