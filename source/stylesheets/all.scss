@@ -7,11 +7,13 @@
   margin-left:10px;
 }
 
+
+
 #welcome, #photos, #videos, #organizers{
   background-color:#fff;
 }
 
-.container {
+#welcome .container {
   border-bottom:1px solid #ccc;
 }
 
@@ -35,17 +37,22 @@ section {
       font-size: 2.5em;
       letter-spacing: -1px;
       text-transform: uppercase;
-      padding: 2em 0 2em 0;
+      padding: 1em 0 1em 0;
       text-align:center;
       color:rgb(226, 102, 0);
     }
 }
 
 
-.inner {
-  background-color:#fff;
-  padding: 15px 0;
+.lower {
+  text-transform: lowercase;
+  font-size:20px;
+  list-style-type:none;
+  display:inline;
 
+    a{
+
+    }
 }
 
 #events {
@@ -84,7 +91,7 @@ section {
 #photos{
 
     h2 {
-      padding: 1em 0 1em 0;
+      padding: .5em 0 .5em 0;
     }
 }
 
@@ -93,6 +100,14 @@ section {
     h3{
       font-size:18px;
       text-align:center;
+    }
+
+    img {
+      margin-bottom:2em;
+      border:1px solid #aaa;
+      box-shadow:0px 0px 6px #999;
+      -webkit-box-shadow:0px 0px 6px #999;
+      -mozkit-box-shadow:0px 0px 6px #999;
     }
 }
 /*Videos */
@@ -126,7 +141,7 @@ section {
 }
 
 .thumb-container{
-  width:250px;
+  width:200px;
   display:inline-block;
   vertical-align:top;
   padding:20px;
@@ -157,7 +172,7 @@ section {
     -moz-box-shadow: 1px 1px 3px #aaa;
 }
 
-.yt-descript {
+.yt-title {
     padding-top:10px;
     display:block;
     cursor:pointer;

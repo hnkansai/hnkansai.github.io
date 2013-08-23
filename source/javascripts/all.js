@@ -205,7 +205,10 @@ http://www.apache.org/licenses/LICENSE-2.0
               src += '_a=b';
           }
           ifr.attr('src', src);
+
+          
           jqe.prepend(ifr);
+
       }
 
       function createCarousel(jqe, videos, options) {
@@ -224,8 +227,11 @@ http://www.apache.org/licenses/LICENSE-2.0
           });
       }
 
-      function createThumbnail(jqe, video, options) {
+      function createDetails(jqe, video, options){
 
+      }
+      function createThumbnail(jqe, video, options) {
+        
           var imgurl = video.thumbnails[0].url;
           var img = $('img[src="' + imgurl + '"]');
           var desc;
@@ -238,7 +244,7 @@ http://www.apache.org/licenses/LICENSE-2.0
           mycontainer.append(img);
           img.attr('src', imgurl);
           img.attr('title', video.title);
-          desk = $('<p class="yt-descript">' + video.title + '</p>');
+          desk = $('<p class="yt-title">' + video.title + '</p>');
           mycontainer.append(desk);
           jqe.append(mycontainer);
           
@@ -248,6 +254,7 @@ http://www.apache.org/licenses/LICENSE-2.0
                       autoplay: 1
                   }
               }));
+             
           });
       }
 
@@ -285,12 +292,13 @@ http://www.apache.org/licenses/LICENSE-2.0
               $.getJSON('http://gdata.youtube.com/feeds/api/users/' + allopts.user + '/uploads?alt=json-in-script&orderby=published&format=5&callback=?', null, function(data) {
                   var feed = data.feed;
                   var videos = [];
-                  console.log(data);
+               
                   $.each(feed.entry, function(i, entry) {
 
                       var video = {
                           title: entry.title.$t,
                           id: entry.id.$t.match('[^/]*$'),
+                          desc: entry.content.$t,
                           thumbnails: entry.media$group.media$thumbnail
                       };
                       videos.push(video);
