@@ -204,9 +204,9 @@ http://www.apache.org/licenses/LICENSE-2.0
               }
               src += '_a=b';
           }
+          $('.video-title').html(video.title);
+          $('.video-description').html(video.desc);
           ifr.attr('src', src);
-
-          
           jqe.prepend(ifr);
 
       }
@@ -228,8 +228,22 @@ http://www.apache.org/licenses/LICENSE-2.0
       }
 
       function createDetails(jqe, video, options){
+        var details = $('div.video-details', jqe);
+         if (details.length === 0) {
+              details = $('<div/>');
+              details.addClass('video-details');
+              title = $('<h3/>');
+              title.addClass('video-title');
+              desc = $('<p/>');
+              desc.addClass('video-description');
+              details.append(title);
+              details.append(desc);
+              jqe.prepend(details);
+          }
 
       }
+
+
       function createThumbnail(jqe, video, options) {
         
           var imgurl = video.thumbnails[0].url;
@@ -262,6 +276,7 @@ http://www.apache.org/licenses/LICENSE-2.0
           autoplay: false,
           user: null,
           carousel: createCarousel,
+          details: createDetails,
           player: createPlayer,
           thumbnail: createThumbnail,
           loaded: function() {
@@ -305,6 +320,7 @@ http://www.apache.org/licenses/LICENSE-2.0
                   });
                   allopts.allvideos = videos;
                   allopts.carousel(md, videos, allopts);
+                  allopts.details(md, videos[0], allopts);
                   allopts.player(md, videos[0], allopts);
                   allopts.loaded(videos, allopts);
               });
