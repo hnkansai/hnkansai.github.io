@@ -4,11 +4,14 @@
 
 #photos .span4 {
   margin-left:10px;
+  margin-bottom:10px;
+  cursor:pointer;
 }
 
 #intro {
   background: #3a3531 url('/images/hnk-pattern.png');
   background-size:88px 100px;
+  padding: 1.2em 0;
 }
 
 #nav {
@@ -126,9 +129,9 @@ section {
 
 
 #about{
-  padding-top:20px;
+  padding-top:10px;
   font-size:1.25em;
-  line-height:1.4em;
+  line-height:1.5em;
   text-align:center;
 }
 
@@ -155,7 +158,6 @@ section {
     }
 
     img {
-      margin-bottom:2em;
       border:1px solid #aaa;
       box-shadow:1px 1px 8px #aaa;
       -webkit-box-shadow:1px 1px 8px #aaa;
@@ -187,21 +189,29 @@ section {
 
 
 .youtube .thumbnail {
-    margin: 2px 8px 0 2px;
-    width: 180px;
+    width:  200px;
     cursor:pointer;
 }
 
 .thumb-container{
-  width:200px;
+  width: 200px;
   display:inline-block;
   vertical-align:top;
-  padding:20px;
+  margin:20px;
   text-align:center;
+  position:relative;
     img {
       box-shadow: 1px 1px 6px #888;
       -webkit-box-shadow: 1px 1px 6px #888;
       -moz-box-shadow: 1px 1px 6px #888;
+      padding:0;
+      margin:0;
+    }
+    .caption h3 {
+      font-size:16px;
+      padding:25px 10px 10px 10px;
+      cursor:pointer;
+
     }
 }
 .thumbnail {
@@ -227,7 +237,7 @@ section {
     padding-top:10px;
     display:block;
     cursor:pointer;
-    width:180px;
+    width: 200px;
 }
 .carItemContain{
     width:0;
@@ -235,7 +245,9 @@ section {
 }
 
 /*Flickr photos */
-
+.gallery-img {
+  position:relative;
+}
 
 /*Social*/
 
@@ -274,6 +286,7 @@ section {
   background-color: rgba(0,0,0,.75);  
   height: 100%;  
   width: 100%;  
+  pointer-events:none;
 
   /* For IE 5-7 */  
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);  

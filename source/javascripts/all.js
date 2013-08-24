@@ -24,24 +24,24 @@ $(document).ready(function(){
         var photoSetId = sets[i].id;
         var photoSetTitle = sets[i].title._content;
         var containerDiv = $('<div/>').attr("id", photoSetTitle).attr({
-                                                      class: "span4",
+                                                      class: "span4 gallery-img",
                                                       'data-id': photoSetId
                                                     });
         var primaryImgSrc = "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_n.jpg"
         var primaryImg = $('<img/>').attr("src", primaryImgSrc);
         var primaryImgLrg =  "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_z.jpg"
-        var title = $('<h3/>').append(photoSetTitle);
        
         var a = $('<a/>').attr({
           class: 'fancybox',
           rel: photoSetId,
           href: primaryImgLrg
         });
-
+        var caption = $('<div/>');
+        caption.addClass('caption');
+        caption.html('<h3>'+photoSetTitle  + '</h3>');
         a.append(primaryImg);
-
-        containerDiv.append(title);
         containerDiv.append(a);
+        containerDiv.append(caption);
         
         $('#galleries').append(containerDiv);
         photoSets[i] = photoSetId;
@@ -103,6 +103,11 @@ function lazyLoadPhotos(){
       });
     }
   }
+    $('.gallery-img').hover(function(){  
+        $(this).find('.caption').fadeIn('fast'); 
+    }, function() {  
+        $(this).find('.caption').fadeOut('fast'); 
+    });
 }
 
 
@@ -347,8 +352,6 @@ http://www.apache.org/licenses/LICENSE-2.0
     }, function() {  
         $(".caption", this).fadeOut('fast'); 
     });
-
-
 
 });
 
