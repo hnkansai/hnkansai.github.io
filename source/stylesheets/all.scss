@@ -18,6 +18,9 @@
 
 }
 
+.navbar .nav li a {
+  padding-top:12px;
+}
 .navbar-inner {
   border-radius:0;
 }
@@ -34,6 +37,17 @@
       border-radius:0;
   moz-border-radius:0;
   -webkit-border-radius:0;
+}
+
+.social-icon {
+  display:inline-block;
+  padding-right:20px;
+  opacity:.4;
+  padding: 4px 20px 2px;
+}
+
+.social-icon:hover{
+  opacity:1;
 }
 
 #welcome, #photos, #videos, #organizers{
@@ -277,7 +291,7 @@ section {
 
 
 #organizers {
-  padding-bottom:0;
+ padding-bottom:4em;
 }
 
 /*Mail Chimp*/
