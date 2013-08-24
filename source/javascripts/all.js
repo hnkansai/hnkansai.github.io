@@ -2,14 +2,15 @@
 //= require fancybox.js
 //= require fancybox-media.js
 //= require modernizr-2.6.2-respond-1.1.0.min.js
+//= require bootstrap
 
 $(document).ready(function(){
 
     var photoSets = new Object();
     var photoArray = new Object();
-
-
-
+    $('#navbar').affix({
+      offset: 129
+    });
   //Flickr API calls
   var listData= {
     format: 'json',
