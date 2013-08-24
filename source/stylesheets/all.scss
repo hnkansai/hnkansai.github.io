@@ -62,7 +62,9 @@ section {
     }
 }
 
-
+.no-padding {
+  padding:0;
+}
 .lower {
   text-transform: lowercase;
   font-size:20px;
@@ -259,7 +261,7 @@ section {
 
 
 #organizers {
-  padding-bottom:4em;
+  padding-bottom:0;
 }
 
 /*Mail Chimp*/
@@ -303,5 +305,5 @@ section {
 
 
 #footer{
-  min-height:40px;
+
 }
