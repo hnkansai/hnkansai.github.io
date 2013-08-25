@@ -14,11 +14,15 @@
   margin-right:0 !important;
 }
 
-#intro {
+#header, #footer {
   background: #3a3531 url('/images/hnk-pattern.png');
   background-size:88px 100px;
   padding: 1.2em 0;
   min-width:982px;
+}
+
+#footer{
+  min-height:120px;
 }
 
 #nav {
@@ -249,7 +253,9 @@ section {
 /*Flickr photos */
 .gallery-img {
   position:relative;
-
+    .caption {
+      pointer-events:none;
+    }
     .caption h3{
       margin-top: 15%;
     }
@@ -297,7 +303,6 @@ section {
   background-color: rgba(0,0,0,.75);  
   height: 100%;  
   width: 100%;  
-  pointer-events:none;
 
   /* For IE 5-7 */  
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);  

@@ -112,6 +112,11 @@ function lazyLoadPhotos(){
     }, function() {  
         $(this).find('.caption').fadeOut('fast'); 
     });
+
+    //this is for mobile devices. pointer-events don't seem to work with touches
+    $('#galleries .caption').click(function(event){ 
+        $(this).prev().click();
+    });
 }
 
 
