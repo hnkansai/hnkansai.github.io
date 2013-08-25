@@ -20,7 +20,9 @@ $(document).ready(function(){
   }
   var fetchPhotoSets = callFlickr(listData,function(data){
     var sets = data.photosets.photoset;
+    var j = 1;
       for(var i=0;i<sets.length;i++){
+
         var photoSetId = sets[i].id;
         var photoSetTitle = sets[i].title._content;
         var containerDiv = $('<div/>').attr("id", photoSetTitle).attr({
@@ -42,9 +44,12 @@ $(document).ready(function(){
         a.append(primaryImg);
         containerDiv.append(a);
         containerDiv.append(caption);
-        
+          if (j%3 == 0){
+            containerDiv.addClass('end-cap');
+           };
         $('#galleries').append(containerDiv);
         photoSets[i] = photoSetId;
+        j++;
      }
      setTimeout(lazyLoadPhotos(), 2000);
    });
@@ -86,7 +91,6 @@ function lazyLoadPhotos(){
            
       callFlickr(photoData,function(data){
        
- 
         var photos = data.photoset.photo
         var galleryDiv = $('*[data-id="'+data.photoset.id+'"]');
      

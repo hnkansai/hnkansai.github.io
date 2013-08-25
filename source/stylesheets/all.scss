@@ -3,22 +3,29 @@
 @charset "utf-8";
 
 #photos .span4 {
-  margin-left:10px;
-  margin-bottom:10px;
+  width:310px;
+  margin-left:0;
+  margin-right:15px;
+  margin-bottom:15px;
   cursor:pointer;
+}
+
+.end-cap {
+  margin-right:0 !important;
 }
 
 #intro {
   background: #3a3531 url('/images/hnk-pattern.png');
   background-size:88px 100px;
   padding: 1.2em 0;
+  min-width:982px;
 }
 
 #nav {
   margin:0;
   padding:0;
   height:60px;
-
+  min-width:940px;
 }
 
 .navbar .nav li a {
@@ -26,6 +33,7 @@
 }
 .navbar-inner {
   border-radius:0;
+  min-width:940px;
 }
 
 .navbar .container {
@@ -207,12 +215,6 @@ section {
       padding:0;
       margin:0;
     }
-    .caption h3 {
-      font-size:16px;
-      padding:25px 10px 10px 10px;
-      cursor:pointer;
-
-    }
 }
 .thumbnail {
   border:1px solid #444;
@@ -247,6 +249,10 @@ section {
 /*Flickr photos */
 .gallery-img {
   position:relative;
+
+    .caption h3{
+      margin-top: 15%;
+    }
 }
 
 /*Social*/
@@ -266,12 +272,17 @@ section {
 
 .organizer{
   float:left;
-  width:33.33%;
+  width:310px;
+  margin-right:15px;
   position:relative;
   cursor:pointer;
   overflow:hidden;
+  box-shadow: 2px 2px 8px #888;
 }
 
+#paco{
+  margin-right: 0 !important;
+}
 .organizer img{
   width:100%;
   height:100%;
