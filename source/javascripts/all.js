@@ -362,6 +362,18 @@ http://www.apache.org/licenses/LICENSE-2.0
         $(".caption", this).fadeOut('fast'); 
     });
 
+  var $root = $('html, body');
+
+  $('a').click(function() {
+      var href = $.attr(this, 'href');
+      $root.animate({
+          scrollTop: $(href).offset().top
+      }, 500, function () {
+          window.location.hash = href;
+      });
+      return false;
+  });
+
 });
 
 
