@@ -89,7 +89,8 @@ title: Hacker News Kansai
         <%= image_tag 'sacha.jpg', :class => 'profile-pic'  %>
         <div class = "caption">
           <h3>Sacha Greif </h3>
-          <li><a href="http://sachagreif.com"></a></li>
+          <li><a href="https://twitter.com/SachaGreif">@SachaGreif</a></li>
+          <li><a href="http://sachagreif.com">http://sachagreif.com</a></li>
         </div>
       </span>
 
@@ -97,6 +98,8 @@ title: Hacker News Kansai
         <%= image_tag 'raphael.jpg', :class => 'profile-pic'  %>
        <div class = "caption">
           <h3>Raphael Guyot </h3>
+          <li><a href="https://twitter.com/sanqualis">@sanqualis</a></li>
+          <li><a href="http://sanqualis.com">http://sanqualis.com</a></li>
         </div>
       </span>
       
@@ -104,6 +107,8 @@ title: Hacker News Kansai
         <%= image_tag 'paco.jpg', :class => 'profile-pic'  %>
         <div class = "caption">
           <h3>Francisco 'Paco' Alcantara</h3>
+          <li><a href="https://twitter.com/pacoalcantara">@PacoAlcantara</a></li>
+          <li><a href="http://www.flickr.com/photos/fotopakismo/">Flickr</a></li>
         </div>
       </span>
      </div>
@@ -111,7 +116,14 @@ title: Hacker News Kansai
   </section>
  
   <section id = "footer">
-
+    <div id = "credits" class = "container">
+      <div id = "copyright">
+            Copyright &copy; <%= Time.now.year %> Hacker News Kansai 
+      </div>
+      <div id = "created">
+            Created by <%= link_to 'FajitaNachos', 'http://fajitanachos.com' %>
+      </div>
+    </div>
   </section>
 
 </div>

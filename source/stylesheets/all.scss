@@ -21,10 +21,6 @@
   min-width:982px;
 }
 
-#footer{
-  min-height:120px;
-}
-
 #nav {
   margin:0;
   padding:0;
@@ -284,6 +280,19 @@ section {
   cursor:pointer;
   overflow:hidden;
   box-shadow: 2px 2px 8px #888;
+    .caption li{
+      list-style-type: none;
+      text-align:center;
+      color:#fff;
+      padding-top:5px;
+        a{
+          color: rgba(255,255,255,1);
+          text-decoration:none;
+        }
+        a:hover{
+         color: rgba(255,255,255,.7);
+        }
+    }
 }
 
 #paco{
@@ -314,7 +323,7 @@ section {
   color:#fff;
   text-align:center;
   text-shadow:1px 1px 1px #222;
-  padding-top:1em;
+  padding-top:2em;
   font-size:1.5em;
 }
 
@@ -361,8 +370,18 @@ section {
 }
 
 
-
-
 #footer{
+text-align:center
+}
 
+#credits {
+  color:#ccc;
+  padding: 2em 0 1em 0;
+    a {
+      color: #ff6900;
+    }
+}
+
+#created {
+  padding-top:.5em;
 }
