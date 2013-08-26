@@ -30,6 +30,7 @@
 
 
 
+
 .navbar .nav li a {
   padding-top:12px;
 }
@@ -395,4 +396,18 @@ text-align:center
 
 .sqs-center{
   top:5% !important;
+}
+
+.jp {
+  display:none;
+}
+
+.language a{
+  color: #ff6900 !important;
+  opacity:.6;
+}
+
+.language a:hover {
+  color: #ff6900;
+  opacity:1;
 }

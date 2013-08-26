@@ -71,7 +71,7 @@ $(document).ready(function(){
       nextEvent = data[0].event;
     }
     var formattedDate = formatDate(new Date(nextEvent.starts_at));
-     $('#event-details').append('<a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a>');
+     $('#events').append('<li id = "english-details">Next Event: </li><li><a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a></li>');
   }
   });
 
@@ -364,6 +364,18 @@ http://www.apache.org/licenses/LICENSE-2.0
 
   var $root = $('html, body');
 
+  $('#english').on('click', function(){
+    $('.en').hide();
+    $('.jp').show();
+    
+
+  });
+  $('#japanese').on('click', function(){
+    $('.jp').hide();
+    $('.en').show();
+   
+  });
+
   $('a').click(function() {
       var href = $.attr(this, 'href');
       $root.animate({
@@ -373,6 +385,8 @@ http://www.apache.org/licenses/LICENSE-2.0
       });
       return false;
   });
+
+
 
 });
 

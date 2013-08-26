@@ -1,0 +1,37 @@
+  <section id = "header">
+    <div class = "container">
+      <div class = "row">
+        <span id="logo" class = "span4">
+          <%= image_tag 'hn-logo.png', :width => '300', :class => 'logo'%>
+        </span>
+        <span id= "events" class = "span7 offset1">
+        </span>
+      </div>
+    </div>
+  </section>
+  <section id = "nav">
+         <div id = "navbar" class="navbar navbar-inverse" data-spy="affix">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav">
+                        <li class = "en language"><%=link_to '日本語', '#jp', :id => 'english'%></li>
+                        <li class = "jp language"><%=link_to 'English', '#en', :id => 'japanese'%></li>
+                        <li class = "en nav-link"><%=link_to 'Home', '#' %></li>
+                        <li class = "jp nav-link"><%=link_to 'トップ', '#' %></li>
+                        <li class = "en nav-link"><%=link_to 'Photos', '#photos' %></li>
+                        <li class = "jp nav-link"><%=link_to '写真', '#photos' %></li>
+                        <li class = "en nav-link"><%=link_to 'Videos', '#videos' %></li>
+                        <li class = "jp nav-link"><%=link_to 'ビデオ', '#videos' %></li>
+                        <li class = "en nav-link"><%=link_to 'Contact', 'mailto:hello@hnkansai.org' %></li>
+                        <li class = "jp nav-link"><%=link_to '連絡', 'mailto:hello@hnkansai.org' %></li>
+                    </ul>
+                <div class="social pull-right">
+                  <li class = 'social-icon'><%= link_to image_tag('facebook.png'), 'http://facebook.com/hnkansai' %></li>
+                  <li class = 'social-icon'><%= link_to image_tag('twitter.png'), 'http://twitter.com/hnkansai' %></li>
+                  <li class = 'social-icon'><%= link_to image_tag('flickr.png'), 'http://flickr.com/hnkansai' %></li>
+                  <li class = 'social-icon'><%= link_to image_tag('youtube.png'), 'http://www.youtube.com/channel/UCbxKJC9zZJ9C7YDYuZ3m59Q' %></li>
+                </div>
+            </div>
+        </div>
+      </div>
+  </section>
