@@ -4869,6 +4869,10 @@ http://www.apache.org/licenses/LICENSE-2.0
     $('.en').show();
   });
 
+  $(".fancybox").fancybox({
+  
+  });
+
   var $root = $('html, body');
   $('a').click(function() {
     var href = $.attr(this, 'href');
