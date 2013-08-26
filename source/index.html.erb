@@ -16,12 +16,17 @@ title: Hacker News Kansai
   <section id = "nav">
          <div id = "navbar" class="navbar navbar-inverse" data-spy="affix">
             <div class="navbar-inner">
+               <div id = "language">
+                <ul class = "nav">
+                    <li><%=link_to '日本語', '#jp'%></li>
+                </ul>
+                </div>
                 <div class="container">
                     <ul class="nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#photos">Photos</a></li>
-                        <li><a href="#videos">Videos</a></li>
-                        <li><a href="mailto:hnkansai@gmail.com">Contact</a></li>
+                        <li><%=link_to 'Home', '#' %></li>
+                        <li><%=link_to 'Photos', '#photos' %></li>
+                        <li><%=link_to 'Videos', '#videos' %></li>
+                        <li><%=link_to 'Contact', 'mailto:hello@hnkansai.org' %></li>
                     </ul>
                 <div class="social pull-right">
                   <li class = 'social-icon'><%= link_to image_tag('facebook.png'), 'http://facebook.com/hnkansai' %></li>
