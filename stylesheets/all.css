@@ -6051,20 +6051,15 @@ section {
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
-  background-color: rgba(235, 235, 235, 0.5);
-  -webkit-box-shadow: inset 1px 1px 8px #ccc;
-  -moz-box-shadow: inset 1px 1px 8px #ccc;
-  box-shadow: inset 1px 1px 8px #ccc;
-  border: 1px solid #ccc;
   padding-top: 10px;
   margin-top: 2em; }
 
-/* line 256, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 250, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .youtube .thumbnail {
   width: 200px;
   cursor: pointer; }
 
-/* line 261, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 255, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .thumb-container {
   width: 200px;
   display: inline-block;
@@ -6072,7 +6067,7 @@ section {
   margin: 20px;
   text-align: center;
   position: relative; }
-  /* line 268, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+  /* line 262, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
   .thumb-container img {
     box-shadow: 1px 1px 6px #888;
     -webkit-box-shadow: 1px 1px 6px #888;
@@ -6080,7 +6075,7 @@ section {
     padding: 0;
     margin: 0; }
 
-/* line 276, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 270, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .thumbnail {
   border: 1px solid #444;
   box-shadow: 1px 1px 3px #aaa;
@@ -6088,7 +6083,7 @@ section {
   -moz-box-shadow: 1px 1px 3px #aaa;
   padding: 0; }
 
-/* line 284, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 278, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .player {
   display: block;
   width: 100%;
@@ -6099,27 +6094,31 @@ section {
   -webkit-box-shadow: 2px 2px 8px #888;
   -moz-box-shadow: 2px 2px 8px #888; }
 
-/* line 295, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 289, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .yt-title {
   padding-top: 10px;
   display: block;
   cursor: pointer;
   width: 200px; }
 
-/* line 302, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 296, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .carItemContain {
   width: 0;
   height: 100px; }
 
-/* line 307, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 301, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .video-details {
   width: 80%;
   margin: auto;
   padding: 1em;
   text-align: center; }
 
+/* line 308, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+.video-description {
+  text-align: left; }
+
 /*Organizers*/
-/* line 315, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 313, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .organizer {
   float: left;
   width: 310px;
@@ -6128,77 +6127,77 @@ section {
   cursor: pointer;
   overflow: hidden;
   box-shadow: 2px 2px 8px #888; }
-  /* line 323, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+  /* line 321, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
   .organizer .caption li {
     list-style-type: none;
     text-align: center;
     color: #fff;
     padding-top: 5px; }
-    /* line 328, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+    /* line 326, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
     .organizer .caption li a {
       color: white;
       text-decoration: none; }
-    /* line 332, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+    /* line 330, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
     .organizer .caption li a:hover {
       color: rgba(255, 255, 255, 0.7); }
 
-/* line 338, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 336, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #paco {
   margin-right: 0 !important; }
 
-/* line 341, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 339, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .organizer img {
   width: 100%;
   height: 100%;
   display: block; }
 
-/* line 347, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 345, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #organizers {
   padding-bottom: 4em; }
 
 /*Footer*/
-/* line 353, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 351, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #footer {
   text-align: center; }
 
-/* line 357, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 355, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #credits {
   color: #ccc;
   padding: 2em 0 1em 0; }
-  /* line 360, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+  /* line 358, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
   #credits a {
     color: #ff6900; }
 
-/* line 365, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 363, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #created {
   padding-top: .5em; }
 
 /*Mail Chimp*/
-/* line 372, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 370, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #mc_embed_signup input.email {
   display: inline-block; }
 
-/* line 376, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 374, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #mc_embed_signup input.email:focus {
   box-shadow: none !important;
   color: #333; }
 
-/* line 382, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 380, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #mc_embed_signup input.button {
   display: inline-block;
   height: 37px;
   border: 1px solid #aaa;
   background-color: #0088cc; }
 
-/* line 389, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 387, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #mc_embed_signup input.button:hover {
   background-color: #00689C; }
 
 /* Squaresend */
-/* line 396, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 394, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .sqs-wrapper {
   position: fixed !important; }
 
-/* line 400, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 398, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .sqs-center {
   top: 5% !important; }
