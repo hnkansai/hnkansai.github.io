@@ -6052,14 +6052,16 @@ section {
   overflow-x: scroll;
   overflow-y: hidden;
   padding-top: 10px;
-  margin-top: 2em; }
+  margin-top: 2em;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; }
 
-/* line 250, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 252, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .youtube .thumbnail {
   width: 200px;
   cursor: pointer; }
 
-/* line 255, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 257, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .thumb-container {
   width: 200px;
   display: inline-block;
@@ -6067,7 +6069,7 @@ section {
   margin: 20px;
   text-align: center;
   position: relative; }
-  /* line 262, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+  /* line 264, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
   .thumb-container img {
     box-shadow: 1px 1px 6px #888;
     -webkit-box-shadow: 1px 1px 6px #888;
@@ -6075,7 +6077,7 @@ section {
     padding: 0;
     margin: 0; }
 
-/* line 270, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 272, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .thumbnail {
   border: 1px solid #444;
   box-shadow: 1px 1px 3px #aaa;
@@ -6083,7 +6085,7 @@ section {
   -moz-box-shadow: 1px 1px 3px #aaa;
   padding: 0; }
 
-/* line 278, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 280, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .player {
   display: block;
   width: 100%;
@@ -6094,31 +6096,31 @@ section {
   -webkit-box-shadow: 2px 2px 8px #888;
   -moz-box-shadow: 2px 2px 8px #888; }
 
-/* line 289, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 291, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .yt-title {
   padding-top: 10px;
   display: block;
   cursor: pointer;
   width: 200px; }
 
-/* line 296, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 298, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .carItemContain {
   width: 0;
   height: 100px; }
 
-/* line 301, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 303, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .video-details {
   width: 80%;
   margin: auto;
   padding: 1em;
   text-align: center; }
 
-/* line 308, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 310, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .video-description {
   text-align: left; }
 
 /*Organizers*/
-/* line 313, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 315, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .organizer {
   float: left;
   width: 310px;
@@ -6127,77 +6129,77 @@ section {
   cursor: pointer;
   overflow: hidden;
   box-shadow: 2px 2px 8px #888; }
-  /* line 321, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+  /* line 323, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
   .organizer .caption li {
     list-style-type: none;
     text-align: center;
     color: #fff;
     padding-top: 5px; }
-    /* line 326, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+    /* line 328, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
     .organizer .caption li a {
       color: white;
       text-decoration: none; }
-    /* line 330, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+    /* line 332, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
     .organizer .caption li a:hover {
       color: rgba(255, 255, 255, 0.7); }
 
-/* line 336, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 338, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #paco {
   margin-right: 0 !important; }
 
-/* line 339, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 341, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .organizer img {
   width: 100%;
   height: 100%;
   display: block; }
 
-/* line 345, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 347, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #organizers {
   padding-bottom: 4em; }
 
 /*Footer*/
-/* line 351, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 353, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #footer {
   text-align: center; }
 
-/* line 355, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 357, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #credits {
   color: #ccc;
   padding: 2em 0 1em 0; }
-  /* line 358, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+  /* line 360, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
   #credits a {
     color: #ff6900; }
 
-/* line 363, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 365, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #created {
   padding-top: .5em; }
 
 /*Mail Chimp*/
-/* line 370, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 372, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #mc_embed_signup input.email {
   display: inline-block; }
 
-/* line 374, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 376, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #mc_embed_signup input.email:focus {
   box-shadow: none !important;
   color: #333; }
 
-/* line 380, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 382, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #mc_embed_signup input.button {
   display: inline-block;
   height: 37px;
   border: 1px solid #aaa;
   background-color: #0088cc; }
 
-/* line 387, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 389, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 #mc_embed_signup input.button:hover {
   background-color: #00689C; }
 
 /* Squaresend */
-/* line 394, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 396, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .sqs-wrapper {
   position: fixed !important; }
 
-/* line 398, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 400, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .sqs-center {
   top: 5% !important; }
