@@ -272,8 +272,8 @@ http://www.apache.org/licenses/LICENSE-2.0
           img.addClass('thumbnail');
           mycontainer.append(img);
           img.attr('src', imgurl);
-          img.attr('title', video.title);
-          desk = $('<p class="yt-title">' + video.title + '</p>');
+          img.attr('title', video.thumbTitle);
+          desk = $('<p class="yt-title">' + video.thumbTitle + '</p>');
           mycontainer.append(desk);
           jqe.append(mycontainer);
           
@@ -324,9 +324,11 @@ http://www.apache.org/licenses/LICENSE-2.0
                   var videos = [];
                
                   $.each(feed.entry, function(i, entry) {
-
+                      var title = entry.title.$t;
+                      var thumbTitle = title.replace(/^[^:]*:/, ' ');
                       var video = {
-                          title: entry.title.$t,
+                          title: title,
+                          thumbTitle: thumbTitle,
                           id: entry.id.$t.match('[^/]*$'),
                           desc: entry.content.$t,
                           thumbnails: entry.media$group.media$thumbnail
