@@ -1,7 +1,6 @@
 Hacker News Kansai
 =========
-
-The organizers of the HN Kansai meetup mentioned giving their site a new look. I thought I would try my hand at it. To be fair, it will probably end up being a playground for me to try some new things. If they decide they want to use some of the ideas, all the better. 
+This is the source code for the hnkansai.org website
 
 Tools/APIs/etc
 ---------------
