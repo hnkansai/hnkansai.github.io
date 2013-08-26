@@ -242,12 +242,6 @@ section {
   width:100%;
   overflow-x:scroll;
   overflow-y:hidden; 
-  background-color:rgba(235,235,235,.5);
-
-  -webkit-box-shadow: inset 1px 1px 8px #ccc; 
-  -moz-box-shadow: inset 1px 1px 8px #ccc; 
-  box-shadow: inset 1px 1px 8px #ccc;
-  border:1px solid #ccc;
   padding-top:10px;
   margin-top:2em;
 }
@@ -309,6 +303,10 @@ section {
  margin:auto;
  padding:1em;
  text-align:center;
+}
+
+.video-description{
+  text-align:left;
 }
 
 /*Organizers*/
