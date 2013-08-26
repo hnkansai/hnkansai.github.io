@@ -77,4 +77,12 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
+# Set preferences for middleman-deploy
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.build_before = true # default: false
+  deploy.branch = "master"
+end
+
 
