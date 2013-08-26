@@ -311,6 +311,7 @@ http://www.apache.org/licenses/LICENSE-2.0
         var allopts = $.extend(true, {}, defoptions, options);
         allopts.maindiv = md;
         $.getJSON('http://gdata.youtube.com/feeds/api/users/' + allopts.user + '/uploads?alt=json-in-script&callback=?', null, function(data) {
+         console.log(data);
           var feed = data.feed;
           var videos = [];
        
