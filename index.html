@@ -27,14 +27,13 @@
   
   <body class="index">
      
-      <section id = "header">
+        <section id = "header">
     <div class = "container">
       <div class = "row">
         <span id="logo" class = "span4">
           <img width="300" class="logo" src="/images/hn-logo.png" />
         </span>
         <span id= "events" class = "span7 offset1">
-          <li id = "event-details">Next Event: </li>
         </span>
       </div>
     </div>
@@ -44,11 +43,16 @@
             <div class="navbar-inner">
                 <div class="container">
                     <ul class="nav">
-                        <li><a href="#jp">日本語</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#photos">Photos</a></li>
-                        <li><a href="#videos">Videos</a></li>
-                        <li><a href="mailto:hello@hnkansai.org">Contact</a></li>
+                        <li class = "en language"><a id="english" href="#jp">日本語</a></li>
+                        <li class = "jp language"><a id="japanese" href="#en">English</a></li>
+                        <li class = "en nav-link"><a href="#">Home</a></li>
+                        <li class = "jp nav-link"><a href="#">トップ</a></li>
+                        <li class = "en nav-link"><a href="#photos">Photos</a></li>
+                        <li class = "jp nav-link"><a href="#photos">写真</a></li>
+                        <li class = "en nav-link"><a href="#videos">Videos</a></li>
+                        <li class = "jp nav-link"><a href="#videos">ビデオ</a></li>
+                        <li class = "en nav-link"><a href="mailto:hello@hnkansai.org">Contact</a></li>
+                        <li class = "jp nav-link"><a href="mailto:hello@hnkansai.org">連絡</a></li>
                     </ul>
                 <div class="social pull-right">
                   <li class = 'social-icon'><a href="http://facebook.com/hnkansai"><img src="/images/facebook.png" /></a></li>
@@ -60,24 +64,30 @@
         </div>
       </div>
   </section>
+
   <section id = "welcome">
     <div class = "container">
       <div class = "row">
         <span id = "about" class = "span6 offset3">
-            <p>
+            <p class = 'en'>
               HNKansai is a meetup based around <a href="http://news.ycombinator.com">Hacker News</a>.
               Every month, we get together in Kyoto, Osaka, or Kobe to talk about technology, design, games, and startups. Come join us!
+            </p>
+            <p class = 'jp'>
+              HNKansaiとは <a href="http://news.ycombinator.com">ハッカーニュース</a> 関西読者のオフ会です。 毎月関西周辺で、技術、デザイン、ゲームやスタートアップなどの話をするためのミーティング・交流会を行います。HN関西に是非ご参加ください！
             </p>
         </span>
       </div>
         <div class = "row">
           <span id="newsletter" class = "span6 offset3">
-              <p> Sign up to be notified about upcoming events and other news.</p>
+              <p class = "en"> Sign up to be notified about upcoming events and other news.</p>
+              <p class = "jp"> ニュースレター</p>
               <!-- Begin MailChimp Signup Form -->
               <div id="mc_embed_signup">
               <form action="http://fajitanachos.us6.list-manage.com/subscribe/post?u=2ab6d042c537ad6da617f47a3&amp;id=aefb12e09b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 
                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+
                 <div class="clear">
                   <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
                 </div>
@@ -92,7 +102,8 @@
     <section id = "videos">
     <div class = "container">
       <div class = "row">
-         <h2>Videos</h2>
+         <h2 class = "en">Videos</h2>
+         <h2 class = "jp">ビデオ</h2>
           <div id="player">
           </div>
         </div>
@@ -102,7 +113,8 @@
   <section id = "photos">
     <div class = "container">
       <div class = "row">
-        <h2> Photos </h2>
+        <h2 class = "en"> Photos </h2>
+        <h2 class = "jp">写真</h2>
         <div id = "galleries">
       </div>
     </div>
@@ -111,7 +123,8 @@
   <section id = "organizers">
     <div class = "container">
       <div class = "row">
-      <h2>Organizers</h2>
+      <h2 class = "en">Organizers</h2>
+      <h2 class = "jp">主催者</h2>
       <span id = "sacha" class = "organizer">
         <img class="profile-pic" src="/images/sacha.jpg" />
         <div class = "caption">
@@ -141,7 +154,8 @@
      </div>
     </div>
   </section>
- 
+
+    
   <section id = "footer">
     <div id = "credits" class = "container">
       <div id = "copyright">
