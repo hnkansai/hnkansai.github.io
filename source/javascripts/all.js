@@ -148,17 +148,17 @@ $(document).ready(function(){
 
     //add the proper suffix (st, nd, rd) to the numerical day of the month
     switch(dayOfMonth) {
-      case dayOfMonth == 1:
-      case dayOfMonth == 21: 
-      case dayOfMonth == 31:
+      case 1:
+      case 21: 
+      case 31:
        suffix = "st";
        break;
-      case dayOfMonth == 2:
-      case dayOfMonth == 22:
+      case 2:
+      case 22:
        suffix = "nd";
        break;
-      case dayOfMonth == 3: 
-      case dayOfMonth == 23:
+      case 3: 
+      case 23:
        suffix = "rd";
        break;
       default:
