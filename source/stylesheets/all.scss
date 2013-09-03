@@ -2,6 +2,9 @@
 
 @charset "utf-8";
 
+.row {
+  margin-left:0;
+}
 
 body {
   font-family: "Bitter", "Arial", sans-serif; 
@@ -45,6 +48,10 @@ section {
 
 #welcome, #photos, #videos, #organizers{
   background-color:#fff;
+}
+
+#logo {
+  margin-left:0;
 }
 
 .caption {
@@ -165,6 +172,9 @@ section {
   border-bottom:1px solid #ccc;
 }
 
+#welcome .row {
+  margin-left: -20px;
+}
 
 #about{
   padding-top:10px;
@@ -186,8 +196,8 @@ section {
 #photos .span4 {
   width:310px;
   margin-left:0;
-  margin-right:15px;
-  margin-bottom:15px;
+  margin-right:5px;
+  margin-bottom:5px;
   cursor:pointer;
 }
 
@@ -315,7 +325,7 @@ section {
   .organizer{
   float:left;
   width:310px;
-  margin-right:15px;
+  margin-right:5px;
   position:relative;
   cursor:pointer;
   overflow:hidden;
