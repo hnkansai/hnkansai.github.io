@@ -28,6 +28,12 @@ section {
     }
 }
 
+img {
+  display:inline-block;
+  width:100% !important;
+  height:auto;
+}
+
 .no-padding {
   padding:0;
 }
@@ -47,7 +53,6 @@ section {
   background: #3a3531 url('/images/bg-header.png');
   background-size:10px 10px;
   padding: 1.2em 0;
-  min-width:982px;
 }
 
 #welcome, #photos, #videos, #organizers{
@@ -56,16 +61,23 @@ section {
 
 #logo {
   margin-left:0;
+  max-width:300px;
+}
+
+.logo {
+  max-width:300px;
 }
 
 .caption {
   position:absolute;
+  display:block;
   top:0;
   left:15px;
+  right:15px;
+  bottom:0;
   display:none;
   background-color: rgba(0,0,0,.75);  
-  height: 100%;  
-  width: 100%;  
+  
 
   /* For IE 5-7 */  
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);  
@@ -214,7 +226,7 @@ section {
 .gallery-img {
   position:relative;
   overflow:auto;;
-  margin-bottom:15px;
+  margin-bottom:30px;
   .caption {
     pointer-events:none;
   }
@@ -314,7 +326,8 @@ section {
   .organizer{
   position:relative;
   cursor:pointer;
-  overflow:hidden;
+  overflow:auto;
+   margin-bottom:30px;
     .caption li{
       list-style-type: none;
       text-align:center;
@@ -328,16 +341,17 @@ section {
          color: rgba(255,255,255,.7);
         }
     }
+    img{
+      display:block;
+      border:1px solid #aaa;
+      box-shadow:1px 1px 8px #aaa;
+      -webkit-box-shadow:1px 1px 8px #aaa;
+      -mozkit-box-shadow:1px 1px 8px #aaa;
+
+    }
 }
 
-#paco{
-  margin-right: 0 !important;
-}
-.organizer img{
-  width:310px;
-  height:206px;
-  display:block;
-}
+
 
 #organizers {
  padding-bottom:4em;
