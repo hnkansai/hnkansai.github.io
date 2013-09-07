@@ -2245,6 +2245,7 @@ if(!jQuery)throw new Error("Bootstrap requires jQuery");+function(a){"use strict
 
 
 $(document).ready(function(){
+
   var photoSets = new Object();
   var photoArray = new Object();
   $('#navbar').affix({
@@ -2451,7 +2452,10 @@ http://www.apache.org/licenses/LICENSE-2.0
         $('.video-title').html(video.title);
         $('.video-description').html(video.desc);
         ifr.attr('src', src);
-        jqe.prepend(ifr);
+        var videoContainer = $('<div/>');
+        videoContainer.addClass('video-container');
+        videoContainer.append(ifr);
+        jqe.prepend(videoContainer);
 
     }
 
