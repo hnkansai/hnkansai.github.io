@@ -24,10 +24,10 @@ $(document).ready(function(){
         var photoSetTitle = sets[i].title._content;
         var containerDiv = $('<div/>').attr({
           id: photoSetTitle,
-          class: "col-md-4 gallery-img",
+          class: "col-md-4 col-sm-6 col-xs-12 gallery-img",
           'data-id': photoSetId
         });
-        var primaryImgSrc = "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_n.jpg"
+        var primaryImgSrc = "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_c.jpg"
         var primaryImg = $('<img/>').attr("src", primaryImgSrc);
         var primaryImgLrg =  "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_z.jpg"
        
