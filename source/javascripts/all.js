@@ -200,6 +200,9 @@ http://www.apache.org/licenses/LICENSE-2.0
         if (ifr.length === 0) {
             ifr = $('<iframe scrolling="no">');
             ifr.addClass('player');
+            var videoContainer = $('<div/>');
+            videoContainer.addClass('video-container');
+            videoContainer.append(ifr);
         }
         var src = 'http://www.youtube.com/embed/' + video.id;
         if (options.playopts) {
@@ -212,9 +215,7 @@ http://www.apache.org/licenses/LICENSE-2.0
         $('.video-title').html(video.title);
         $('.video-description').html(video.desc);
         ifr.attr('src', src);
-        var videoContainer = $('<div/>');
-        videoContainer.addClass('video-container');
-        videoContainer.append(ifr);
+        
         jqe.prepend(videoContainer);
 
     }
