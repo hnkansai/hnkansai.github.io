@@ -5,7 +5,9 @@
 .row {
   margin-left:0;
 }
-
+html,body {
+  height:100%;
+}
 body {
   font-family: "Bitter", "Arial", sans-serif; 
   color: rgba(0, 0, 0, .7);
