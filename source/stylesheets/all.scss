@@ -1,4 +1,4 @@
-@import 'bootstrap';
+//= require bootstrap.min
 
 @charset "utf-8";
 
@@ -32,6 +32,10 @@ section {
   padding:0;
 }
 
+.container {
+  max-width:940px;
+}
+
 .lower {
   text-transform: lowercase;
   font-size:20px;
@@ -57,7 +61,7 @@ section {
 .caption {
   position:absolute;
   top:0;
-  left:0;
+  left:15px;
   display:none;
   background-color: rgba(0,0,0,.75);  
   height: 100%;  
@@ -81,6 +85,10 @@ section {
   display:none;
 }
 
+#navbar .jp {
+  display:none;
+}
+
 .language a{
   color: #ff6900 !important;
   opacity:.6;
@@ -97,20 +105,10 @@ section {
   margin:0;
   padding:0;
   height:60px;
-  min-width:940px;
 }
 
-.navbar .nav li a {
-  padding-top:12px;
-}
-
-.navbar-inner {
+#navbar {
   border-radius:0;
-  min-width:940px;
-}
-
-.navbar .container {
-  width:940px;
 }
 
 #navbar.affix {
@@ -121,13 +119,13 @@ section {
       border-radius:0;
   moz-border-radius:0;
   -webkit-border-radius:0;
-}
+} 
 
 .social-icon {
   display:inline-block;
   padding-right:20px;
   opacity:.4;
-  padding: 4px 0px 2px;
+  padding: 9px 0px;
 }
 
 .social-icon:hover{
@@ -135,12 +133,12 @@ section {
 }
 
 #events {
-  margin-top:44px;
+  margin-top:40px;
   h3 {
     display:inline;
   }
   li { 
-    font-size:1.25em;
+    font-size:1.2em;
     color:rgb(255,105,0);
     display:inline;
     text-decoration:none;
@@ -193,17 +191,6 @@ section {
 
 /*Photos*/
 
-#photos .span4 {
-  width:310px;
-  margin-left:0;
-  margin-right:5px;
-  margin-bottom:5px;
-  cursor:pointer;
-}
-
-.end-cap {
-  margin-right:0 !important;
-}
 
 #photos{
   h2 {
@@ -226,6 +213,8 @@ section {
 
 .gallery-img {
   position:relative;
+  overflow:auto;;
+  margin-bottom:15px;
   .caption {
     pointer-events:none;
   }
@@ -323,13 +312,9 @@ section {
 
 /*Organizers*/
   .organizer{
-  float:left;
-  width:310px;
-  margin-right:5px;
   position:relative;
   cursor:pointer;
   overflow:hidden;
-  box-shadow: 2px 2px 8px #888;
     .caption li{
       list-style-type: none;
       text-align:center;

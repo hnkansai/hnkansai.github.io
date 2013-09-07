@@ -1,19 +1,19 @@
   <section id = "header">
     <div class = "container">
       <div class = "row">
-        <span id="logo" class = "span4">
+        <span id="logo" class = "col-md-4">
           <%= image_tag 'hn-logo.png', :width => '300', :class => 'logo'%>
         </span>
-        <span id= "events" class = "span7 offset1">
+        <span id= "events" class = "col-md-7 col-md-offset-1">
         </span>
       </div>
     </div>
   </section>
   <section id = "nav">
          <div id = "navbar" class="navbar navbar-inverse" data-spy="affix">
-            <div class="navbar-inner">
                 <div class="container">
-                    <ul class="nav">
+                  <div class = "collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
                         <li class = "en language"><%=link_to '日本語', '#jp', :id => 'english'%></li>
                         <li class = "jp language"><%=link_to 'English', '#en', :id => 'japanese'%></li>
                         <li class = "en nav-link"><%=link_to 'Home', '#' %></li>
@@ -31,7 +31,7 @@
                   <li class = 'social-icon'><%= link_to image_tag('flickr.png'), 'http://flickr.com/hnkansai' %></li>
                   <li class = 'social-icon'><%= link_to image_tag('youtube.png'), 'http://www.youtube.com/channel/UCbxKJC9zZJ9C7YDYuZ3m59Q' %></li>
                 </div>
+              </div>
             </div>
-        </div>
       </div>
   </section>

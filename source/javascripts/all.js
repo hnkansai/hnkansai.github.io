@@ -2,7 +2,7 @@
 //= require fancybox.js
 //= require fancybox-media.js
 //= require modernizr-2.6.2-respond-1.1.0.min.js
-//= require bootstrap
+//= require bootstrap.min
 
 $(document).ready(function(){
   var photoSets = new Object();
@@ -19,13 +19,12 @@ $(document).ready(function(){
   }
   var fetchPhotoSets = callFlickr(listData,function(data){
     var sets = data.photosets.photoset;
-    var j = 1;
       for(var i=0;i<sets.length;i++){
         var photoSetId = sets[i].id;
         var photoSetTitle = sets[i].title._content;
         var containerDiv = $('<div/>').attr({
           id: photoSetTitle,
-          class: "span4 gallery-img",
+          class: "col-md-4 gallery-img",
           'data-id': photoSetId
         });
         var primaryImgSrc = "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_n.jpg"
@@ -44,12 +43,8 @@ $(document).ready(function(){
         a.append(primaryImg);
         containerDiv.append(a);
         containerDiv.append(caption);
-          if (j%3 == 0){
-            containerDiv.addClass('end-cap');
-           };
         $('#galleries').append(containerDiv);
         photoSets[i] = photoSetId;
-        j++;
      }
      setTimeout(lazyLoadPhotos(), 2000);
    });
