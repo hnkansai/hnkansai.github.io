@@ -170,7 +170,7 @@
 /* Overlay helper */
 /* line 175, /Users/Holsted/Projects/hnkansai/source/stylesheets/fancybox.scss */
 .fancybox-lock {
-  overflow: hidden !important;
+  overflow: visible !important;
   width: auto; }
 
 /* line 180, /Users/Holsted/Projects/hnkansai/source/stylesheets/fancybox.scss */
