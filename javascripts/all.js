@@ -2305,16 +2305,9 @@ $(document).ready(function(){
       for (var i in data) {
         upcomingEvents.push(data[i].event);
         nextEvent = data[0].event;
-        console.log(upcomingEvents);
       }
       var formattedDate = formatDate(new Date(nextEvent.starts_at));
-     
-
-      // Temporarily removed because the Doorkeeper API is being wonky. 
-      // Will add it back once the starting times are updating properly. 
-       
-      
-      // $('#events').append('<li id = "english-details">Next Event: </li><li><a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a></li>');
+       $('#events').append('<li id = "english-details">Next Event: </li><li><a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a></li>');
     }
   });
 
@@ -2382,10 +2375,10 @@ $(document).ready(function(){
       "October", "November", "December"
     );
 
-    var dayOfMonth = date.getDate();
-    var month = date.getMonth();
-    var hour = date.getHours();
-    var minutes = date.getMinutes();
+    var dayOfMonth = date.getUTCDate();
+    var month = date.getUTCMonth();
+    var hour = date.getUTCHours() + 9;
+    var minutes = date.getUTCMinutes();
     var suffix = "";
     var am_pm;
 
