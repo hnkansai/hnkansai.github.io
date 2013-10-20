@@ -2305,6 +2305,7 @@ $(document).ready(function(){
       for (var i in data) {
         upcomingEvents.push(data[i].event);
         nextEvent = data[0].event;
+        console.log(upcomingEvents);
       }
       var formattedDate = formatDate(new Date(nextEvent.starts_at));
        $('#events').append('<li id = "english-details">Next Event: </li><li><a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a></li>');
