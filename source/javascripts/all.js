@@ -60,12 +60,8 @@ $(document).ready(function(){
     dataType: "jsonp",
     crossDomain: true,
     success: function(data){
-      var upcomingEvents = [];
-      var nextEvent;
-      for (var i in data) {
-        upcomingEvents.push(data[i].event);
-        nextEvent = data[0].event;
-      }
+      var totalEvents = data.length
+      var nextEvent = data[totalEvents-1].event;
       var formattedDate = formatDate(new Date(nextEvent.starts_at));
        $('#events').append('<li id = "english-details">Next Event: </li><li><a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a></li>');
     }
