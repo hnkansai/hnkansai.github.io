@@ -112,7 +112,7 @@ $(document).ready(function(){
   function callFlickr(data, callback){
     $.ajax({
       type: "GET",
-      url: "http://api.flickr.com/services/rest/",
+      url: "https://api.flickr.com/services/rest/",
       data: data,
       dataType: 'jsonp',
       jsonp: 'jsoncallback',
