@@ -251,7 +251,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
     function createThumbnail(jqe, video, options) {
       
-        var imgurl = video.thumbnails[0].url;
+        var imgurl = video.thumbnails.high.url;
         var img = $('img[src="' + imgurl + '"]');
         var desc;
         var container;
@@ -308,25 +308,33 @@ http://www.apache.org/licenses/LICENSE-2.0
         md.addClass('youtube-channel');
         var allopts = $.extend(true, {}, defoptions, options);
         allopts.maindiv = md;
-        $.getJSON('http://gdata.youtube.com/feeds/api/users/' + allopts.user + '/uploads?alt=json-in-script&callback=?', null, function(data) {
-         console.log(data);
-          var feed = data.feed;
-          var videos = [];
-       
-          $.each(feed.entry, function(i, entry) {
-            var video = {
-                title: entry.title.$t,
-                id: entry.id.$t.match('[^/]*$'),
-                desc: entry.content.$t,
-                thumbnails: entry.media$group.media$thumbnail
-            };
-            videos.push(video);
+        $.getJSON('https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id='+allopts.user+'&key=AIzaSyAbI6T7s1vZtb_DY4pRWnuq-kZIqJNUa6E', null, function(data) {
+
+          var playlistId = data.items[0].contentDetails.relatedPlaylists.uploads;
+
+
+          $.getJSON('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId='+playlistId+'&key=AIzaSyAbI6T7s1vZtb_DY4pRWnuq-kZIqJNUa6E', null, function(data){
+
+           console.log(data);
+            var videos = [];
+         
+            $.each(data.items, function(i, item) {
+              var snippet = item.snippet;
+
+              var video = {
+                  title: snippet.title,
+                  id: data.id,
+                  desc: snippet.description,
+                  thumbnails: snippet.thumbnails
+              };
+              videos.push(video);
+            });
+            allopts.allvideos = videos;
+            allopts.carousel(md, videos, allopts);
+            allopts.details(md, videos[0], allopts);
+            allopts.player(md, videos[0], allopts);
+            allopts.loaded(videos, allopts);
           });
-          allopts.allvideos = videos;
-          allopts.carousel(md, videos, allopts);
-          allopts.details(md, videos[0], allopts);
-          allopts.player(md, videos[0], allopts);
-          allopts.loaded(videos, allopts);
         });
       }
     });
