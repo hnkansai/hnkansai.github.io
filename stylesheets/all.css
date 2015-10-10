@@ -218,7 +218,8 @@ img {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
-  padding: 0 10px; }
+  padding: 0 10px;
+  max-height: 240px; }
   /* line 228, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
   .gallery-img .caption {
     pointer-events: none; }
@@ -245,7 +246,7 @@ img {
   padding-bottom: 56.25%;
   height: 0; }
 
-/* line 259, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
+/* line 257, /Users/Holsted/Projects/hnkansai/source/stylesheets/all.scss */
 .video-container iframe,
 .video-container object,
 .video-container embed {

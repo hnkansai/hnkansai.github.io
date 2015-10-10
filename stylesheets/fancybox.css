@@ -1,5 +1,5 @@
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
-/* line 13, /Users/Holsted/Projects/hnkansai/source/stylesheets/fancybox.scss */
+/* line 3, /Users/Holsted/Projects/hnkansai/source/stylesheets/fancybox.scss */
 .fancybox-wrap,
 .fancybox-skin,
 .fancybox-outer,
@@ -116,7 +116,7 @@
   text-decoration: none;
   background: transparent url("/images/blank.gif");
   /* helps IE */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   z-index: 8040;
   width: 60px; }
 
