@@ -312,10 +312,8 @@ http://www.apache.org/licenses/LICENSE-2.0
 
           var playlistId = data.items[0].contentDetails.relatedPlaylists.uploads;
 
-
           $.getJSON('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId='+playlistId+'&key=AIzaSyAbI6T7s1vZtb_DY4pRWnuq-kZIqJNUa6E', null, function(data){
 
-           console.log(data);
             var videos = [];
          
             $.each(data.items, function(i, item) {
