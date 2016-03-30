@@ -2561,7 +2561,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
               var video = {
                   title: snippet.title,
-                  id: data.id,
+                  id: snippet.resourceId.videoId,
                   desc: snippet.description,
                   thumbnails: snippet.thumbnails
               };
