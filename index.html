@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+    <script src="//squaresend.com/squaresend.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Bitter:400,700,400italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+     <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+
+     <meta name="viewport" content="width=device-width">
+  
+
+  
+    <title>Hacker News Kansai</title>
+    
+    <link href="/stylesheets/normalize.css" rel="stylesheet" /><link href="/stylesheets/all.css" rel="stylesheet" />
+    <link href="/stylesheets/fancybox.css" rel="stylesheet" />
+    <script src="/javascripts/all.js"></script>
+
+
+  </head>
+  
+  <body class="index">
+     
+        <section id = "header">
+    <div class = "container">
+        <div id="logo" class = "col-md-5 col-xs-12">
+          <img class="logo" src="/images/hn-logo.png" />
+        </div>
+        <div id= "events" class = "col-md-7 col-md-offset-1 col-xs-12">
+        </div>
+    </div>
+  </section>
+  <section id = "nav">
+         <div id = "navbar" class="navbar navbar-inverse" data-spy="affix">
+                <div class="container">
+                  
+                  <div class = "collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class = "en language"><a id="english" href="#jp">日本語</a></li>
+                        <li class = "jp language"><a id="japanese" href="#en">English</a></li>
+                        <li class = "en nav-link"><a href="#">Home</a></li>
+                        <li class = "jp nav-link"><a href="#">トップ</a></li>
+                        <li class = "en nav-link"><a href="#photos">Photos</a></li>
+                        <li class = "jp nav-link"><a href="#photos">写真</a></li>
+                        <li class = "en nav-link"><a href="#videos">Videos</a></li>
+                        <li class = "jp nav-link"><a href="#videos">ビデオ</a></li>
+                        <li class = "en nav-link"><a href="mailto:hello@hnkansai.org">Contact</a></li>
+                        <li class = "jp nav-link"><a href="mailto:hello@hnkansai.org">連絡</a></li>
+                    </ul>
+                <div class="social pull-right">
+                  <li class = 'social-icon'><a href="http://facebook.com/groups/hnkansai"><img src="/images/facebook.png" /></a></li>
+                  <li class = 'social-icon'><a href="http://twitter.com/hnkansai"><img src="/images/twitter.png" /></a></li>
+                  <li class = 'social-icon'><a href="http://flickr.com/hnkansai"><img src="/images/flickr.png" /></a></li>
+                  <li class = 'social-icon'><a href="http://www.youtube.com/channel/UCbxKJC9zZJ9C7YDYuZ3m59Q"><img src="/images/youtube.png" /></a></li>
+                </div>
+              </div>
+            </div>
+      </div>
+  </section>
+
+  <section id = "welcome">
+    <div class = "container">
+        <span id = "about" class = "col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <p class = 'en'>
+              HNKansai is a meetup based around <a href="http://news.ycombinator.com">Hacker News</a>.
+              Every month, we get together in Kyoto, Osaka, or Kobe to talk about technology, design, games, and startups. Come join us!
+            </p>
+            <p class = 'jp'>
+              HNKansaiとは <a href="http://news.ycombinator.com">ハッカーニュース</a> 関西読者のオフ会です。 毎月関西周辺で、技術、デザイン、ゲームやスタートアップなどの話をするためのミーティング・交流会を行います。HN関西に是非ご参加ください！
+            </p>
+        </span>
+          <span id="newsletter" class = "col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+              <p class = "en"> Sign up to be notified about upcoming events and other news.</p>
+              <p class = "jp"> ニュースレター</p>
+              <!-- Begin MailChimp Signup Form -->
+              <div id="mc_embed_signup">
+                <form action="http://hnkansai.us7.list-manage.com/subscribe/post?u=491fac1e90fe1caaf30a86e62&amp;id=6221c3d7b1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+                  <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+              </div>
+              <!--End mc_embed_signup-->
+          </span>
+      </div>
+  </section>
+
+    <section id = "videos">
+    <div class = "container">
+         <h2 class = "en">Videos</h2>
+         <h2 class = "jp">ビデオ</h2>
+          <div id="player">
+          </div>
+    </div>
+  </section>
+
+  <section id = "photos">
+    <div class = "container">
+        <h2 class = "en"> Photos </h2>
+        <h2 class = "jp">写真</h2>
+        <div id = "galleries">
+      </div>
+    </div>
+  </section>
+
+  <section id = "organizers">
+    <div class = "container">
+      <h2 class = "en">Organizers</h2>
+      <h2 class = "jp">主催者</h2>
+      <div id = "sacha" class = "organizer col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+        <img class="profile-pic" src="/images/sacha.jpg" />
+        <div class = "caption">
+          <h3>Sacha Greif </h3>
+          <li><a href="https://twitter.com/SachaGreif">@SachaGreif</a></li>
+          <li><a href="http://sachagreif.com">http://sachagreif.com</a></li>
+        </div>
+      </div>
+
+      <div id = "raphael" class = "organizer col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+        <img class="profile-pic" src="/images/raphael.jpg" />
+       <div class = "caption">
+          <h3>Raphael Guyot </h3>
+          <li><a href="https://twitter.com/sanqualis">@sanqualis</a></li>
+          <li><a href="http://sanqualis.com">http://sanqualis.com</a></li>
+        </div>
+      </div>
+      
+      <div id ="paco" class = "organizer col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+        <img class="profile-pic" src="/images/paco.jpg" />
+        <div class = "caption">
+          <h3>Francisco 'Paco' Alcantara</h3>
+          <li><a href="https://twitter.com/pacoalcantara">@PacoAlcantara</a></li>
+          <li><a href="http://www.flickr.com/photos/fotopakismo/">Flickr</a></li>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+  <section id = "footer">
+    <div id = "credits" class = "container">
+      <div id = "copyright">
+            Copyright &copy; 2016 Hacker News Kansai 
+      </div>
+      <div id = "created">
+            Created by <a href="http://fajitanachos.com">FajitaNachos</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-43495110-1', 'hnkansai.org');
+    ga('send', 'pageview');
+  </script>
+  
+  </body>
+</html>
