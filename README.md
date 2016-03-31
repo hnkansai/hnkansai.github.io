@@ -43,7 +43,7 @@ Frameworks, APIs, and other cool things we used
 
 [Flickr API](https://www.flickr.com/services/api/)
 
-[Youtube API](https://developers.google.com/youtube/getting_started)
+[YouTube API](https://developers.google.com/youtube/getting_started)
 
 [Fancybox](http://fancyapps.com/fancybox/)
 
