@@ -9,7 +9,7 @@ Contributing
 
 If you want to contribute to the project, here's a guide to help you get started. 
 
-1. Install and read up on [Middleman](http://http://middlemanapp.com/). If you are familiar with Ruby/Rails then you'll be up and running in no time.
+1. Install and read up on [Middleman](http://http://middlemanapp.com/). If you are familiar with Ruby/Rails then you'll be up and running in no time. Most of the code is just HTML/JavaScript so you there's no need for any deep Ruby knowledge. 
 
 2. Fork the repo and clone it locally. There are two branches, Source and Master. You'll want to do all of your work on the Source branch (or a new topic branch you create locally).
 
@@ -48,5 +48,11 @@ Frameworks, APIs, and other cool things we used
 [Fancybox](http://fancyapps.com/fancybox/)
 
 [Squaresend](https://squaresend.com/)
+
+
+Deploying
+------------
+
+Run `middleman deploy`. 
 
 
