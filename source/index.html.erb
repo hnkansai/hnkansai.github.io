@@ -3,20 +3,20 @@ title: Hacker News Kansai
 ---
   <%= partial 'partials/header' %>
 
-  <section id = "welcome">
-    <div class = "container">
-        <span id = "about" class = "col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-            <p class = 'en'>
+  <section id="welcome">
+    <div class="container">
+        <span id="about" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <p class='en'>
               HNKansai is a meetup based around <%= link_to 'Hacker News', 'https://news.ycombinator.com' %>.
               Every month, we get together in Kyoto, Osaka, or Kobe to talk about technology, design, games, and startups. Come join us!
             </p>
-            <p class = 'jp'>
+            <p class='jp'>
               HNKansaiとは <%=link_to 'ハッカーニュース', 'https://news.ycombinator.com' %> 関西読者のオフ会です。 毎月関西周辺で、技術、デザイン、ゲームやスタートアップなどの話をするためのミーティング・交流会を行います。HN関西に是非ご参加ください！
             </p>
         </span>
-          <span id="newsletter" class = "col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-              <p class = "en"> Sign up to be notified about upcoming events and other news.</p>
-              <p class = "jp"> ニュースレター</p>
+          <span id="newsletter" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+              <p class="en"> Sign up to be notified about upcoming events and other news.</p>
+              <p class="jp"> ニュースレター</p>
               <!-- Begin MailChimp Signup Form -->
               <div id="mc_embed_signup">
                 <form action="http://hnkansai.us7.list-manage.com/subscribe/post?u=491fac1e90fe1caaf30a86e62&amp;id=6221c3d7b1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -29,49 +29,49 @@ title: Hacker News Kansai
       </div>
   </section>
 
-    <section id = "videos">
-    <div class = "container">
-         <h2 class = "en">Videos</h2>
-         <h2 class = "jp">ビデオ</h2>
+    <section id="videos">
+    <div class="container">
+         <h2 class="en">Videos</h2>
+         <h2 class="jp">ビデオ</h2>
           <div id="player">
           </div>
     </div>
   </section>
 
-  <section id = "photos">
-    <div class = "container">
-        <h2 class = "en"> Photos </h2>
-        <h2 class = "jp">写真</h2>
-        <div id = "galleries">
+  <section id="photos">
+    <div class="container">
+        <h2 class="en"> Photos </h2>
+        <h2 class="jp">写真</h2>
+        <div id="galleries">
       </div>
     </div>
   </section>
 
-  <section id = "organizers">
-    <div class = "container">
-      <h2 class = "en">Organizers</h2>
-      <h2 class = "jp">主催者</h2>
-      <div id = "sacha" class = "organizer col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+  <section id="organizers">
+    <div class="container">
+      <h2 class="en">Organizers</h2>
+      <h2 class="jp">主催者</h2>
+      <div id="sacha" class="organizer col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
         <%= image_tag 'sacha.jpg', :class => 'profile-pic'  %>
-        <div class = "caption">
+        <div class="caption">
           <h3>Sacha Greif </h3>
           <li><a href="https://twitter.com/SachaGreif">@SachaGreif</a></li>
           <li><a href="http://sachagreif.com">http://sachagreif.com</a></li>
         </div>
       </div>
 
-      <div id = "raphael" class = "organizer col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+      <div id="raphael" class="organizer col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
         <%= image_tag 'raphael.jpg', :class => 'profile-pic'  %>
-       <div class = "caption">
+       <div class="caption">
           <h3>Raphael Guyot </h3>
           <li><a href="https://twitter.com/sanqualis">@sanqualis</a></li>
           <li><a href="http://sanqualis.com">http://sanqualis.com</a></li>
         </div>
       </div>
-      
-      <div id ="paco" class = "organizer col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+
+      <div id ="paco" class="organizer col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
         <%= image_tag 'paco.jpg', :class => 'profile-pic'  %>
-        <div class = "caption">
+        <div class="caption">
           <h3>Francisco 'Paco' Alcantara</h3>
           <li><a href="https://twitter.com/pacoalcantara">@PacoAlcantara</a></li>
           <li><a href="https://www.flickr.com/photos/fotopakismo/">Flickr</a></li>
