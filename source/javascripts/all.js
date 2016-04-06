@@ -28,9 +28,9 @@ $(document).ready(function(){
           class: "col-md-4 col-sm-6 col-xs-12 gallery-img",
           'data-id': photoSetId
         });
-        var primaryImgSrc = "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_c.jpg"
+        var primaryImgSrc = "https://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_c.jpg"
         var primaryImg = $('<img/>').attr("src", primaryImgSrc);
-        var primaryImgLrg =  "http://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_z.jpg"
+        var primaryImgLrg =  "https://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_z.jpg"
        
         var a = $('<a/>').attr({
             class: 'fancybox',
@@ -55,7 +55,7 @@ $(document).ready(function(){
   //Doorkeeper API Call to fetch current events
   $.ajax({
     type: "GET",
-    url: "http://api.doorkeeper.jp/groups/hnkansai/events?&since="+today,
+    url: "https://api.doorkeeper.jp/groups/hnkansai/events?&since="+today,
     data: {},
     dataType: "jsonp",
     crossDomain: true,
@@ -64,7 +64,7 @@ $(document).ready(function(){
         var totalEvents = data.length
         var nextEvent = data[0].event;
         var formattedDate = formatDate(new Date(nextEvent.starts_at));
-        $('#events').append('<li id = "english-details">Next Event: </li><li><a href="http://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a></li>');
+        $('#events').append('<li id = "english-details">Next Event: </li><li><a href="https://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a></li>');
       }
     }
   });
@@ -86,7 +86,7 @@ $(document).ready(function(){
           var galleryDiv = $('*[data-id="'+data.photoset.id+'"]');
        
           for(var j=1;j<photos.length;j++){
-            var imgSrc = "http://farm"+photos[j].farm+".staticflickr.com/"+photos[j].server+"/"+photos[j].id+"_"+photos[j].secret+"_z.jpg"
+            var imgSrc = "https://farm"+photos[j].farm+".staticflickr.com/"+photos[j].server+"/"+photos[j].id+"_"+photos[j].secret+"_z.jpg"
             var a = $('<a/>').attr({
               class: 'fancybox',
               rel: data.photoset.id,
@@ -202,7 +202,7 @@ http://www.apache.org/licenses/LICENSE-2.0
             videoContainer.addClass('video-container');
             videoContainer.append(ifr);
         }
-        var src = 'http://www.youtube.com/embed/' + video.id;
+        var src = 'https://www.youtube.com/embed/' + video.id;
         if (options.playopts) {
             src += '?';
             for (var k in options.playopts) {
