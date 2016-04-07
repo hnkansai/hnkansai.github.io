@@ -7,7 +7,6 @@
 $(document).ready(function(){
 
   var photoSets = new Object();
-  var photoArray = new Object();
   $('#navbar').affix({
     offset: 129
   });
@@ -28,9 +27,9 @@ $(document).ready(function(){
           class: "col-md-4 col-sm-6 col-xs-12 gallery-img",
           'data-id': photoSetId
         });
-        var primaryImgSrc = "https://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_c.jpg"
+        var primaryImgSrc = "https://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_c.jpg";
         var primaryImg = $('<img/>').attr("src", primaryImgSrc);
-        var primaryImgLrg =  "https://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_z.jpg"
+        var primaryImgLrg =  "https://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_z.jpg";
        
         var a = $('<a/>').attr({
             class: 'fancybox',
@@ -61,7 +60,7 @@ $(document).ready(function(){
     crossDomain: true,
     success: function(data){
       if(data && data.length){
-        var totalEvents = data.length
+        // var totalEvents = data.length;
         var nextEvent = data[0].event;
         var formattedDate = formatDate(new Date(nextEvent.starts_at));
         $('#events').append('<li id = "english-details">Next Event: </li><li><a href="https://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a></li>');
@@ -78,15 +77,15 @@ $(document).ready(function(){
           user_id: '99688089@N06',
           photoset_id: photoSets[id],
           api_key: '72a77248081016485a20c2b18c9c50ee'
-        }
+        };
              
         callFlickr(photoData,function(data){
          
-          var photos = data.photoset.photo
+          var photos = data.photoset.photo;
           var galleryDiv = $('*[data-id="'+data.photoset.id+'"]');
        
           for(var j=1;j<photos.length;j++){
-            var imgSrc = "https://farm"+photos[j].farm+".staticflickr.com/"+photos[j].server+"/"+photos[j].id+"_"+photos[j].secret+"_z.jpg"
+            var imgSrc = "https://farm"+photos[j].farm+".staticflickr.com/"+photos[j].server+"/"+photos[j].id+"_"+photos[j].secret+"_z.jpg";
             var a = $('<a/>').attr({
               class: 'fancybox',
               rel: data.photoset.id,
@@ -225,9 +224,9 @@ http://www.apache.org/licenses/LICENSE-2.0
         car.addClass('video-carousel');
         var carouselWrap = $('<div/>');
         carouselWrap.addClass('carousel-wrap');
-        carouselWrap.append(car)
+        carouselWrap.append(car);
         jqe.append(carouselWrap);
-      }
+    }
 
       $.each(videos, function(i, video) {
           options.thumbnail(car, video, options);
@@ -254,7 +253,6 @@ http://www.apache.org/licenses/LICENSE-2.0
         var imgurl = video.thumbnails.high.url;
         var img = $('img[src="' + imgurl + '"]');
         var desc;
-        var container;
         var mycontainer = $('<div/>');
         mycontainer.addClass('thumb-container');  
         if (img.length !== 0) return;
@@ -288,7 +286,6 @@ http://www.apache.org/licenses/LICENSE-2.0
         var thumbs = $('.thumb-container').length;
         var thumbWidth = $('.thumb-container:first').width() + 40;
         var containerWidth = thumbs * thumbWidth;
-        var windowWidth = $(window).width();
    
         $('.video-carousel').width(containerWidth);
       },
