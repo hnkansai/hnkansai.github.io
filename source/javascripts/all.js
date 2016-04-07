@@ -17,8 +17,8 @@ $(document).ready(function(){
     method: 'flickr.photosets.getList',
     user_id: '99688089@N06',
     api_key: '72a77248081016485a20c2b18c9c50ee'
-  }
-  var fetchPhotoSets = callFlickr(listData,function(data){
+  };
+  callFlickr(listData,function(data){
     var sets = data.photosets.photoset;
       for(var i=0;i<sets.length;i++){
         var photoSetId = sets[i].id;
