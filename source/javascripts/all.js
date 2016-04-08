@@ -238,9 +238,9 @@ http://www.apache.org/licenses/LICENSE-2.0
        if (details.length === 0) {
         details = $('<div/>');
         details.addClass('video-details');
-        title = $('<h3/>');
+        var title = $('<h3/>');
         title.addClass('video-title');
-        desc = $('<p/>');
+        var desc = $('<p/>');
         desc.addClass('video-description');
         details.append(title);
         details.append(desc);
@@ -261,8 +261,8 @@ http://www.apache.org/licenses/LICENSE-2.0
         mycontainer.append(img);
         img.attr('src', imgurl);
         img.attr('title', video.title);
-        desk = $('<p class="yt-title">' + video.title + '</p>');
-        mycontainer.append(desk);
+        desc = $('<p class="yt-title">' + video.title + '</p>');
+        mycontainer.append(desc);
         jqe.append(mycontainer);
         
         mycontainer.click(function() {
