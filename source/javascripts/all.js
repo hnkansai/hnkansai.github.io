@@ -1,4 +1,3 @@
-
 //= require fancybox.js
 //= require fancybox-media.js
 //= require modernizr-2.6.2-respond-1.1.0.min.js
@@ -28,7 +27,10 @@ $(document).ready(function(){
           'data-id': photoSetId
         });
         var primaryImgSrc = "https://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_c.jpg";
-        var primaryImg = $('<img/>').attr("src", primaryImgSrc);
+        var primaryImg = $('<div/>').attr({
+          class: 'gallery-img-content',
+          style: 'background-image:url(' + primaryImgSrc + ');'
+        });
         var primaryImgLrg =  "https://farm"+sets[i].farm+".staticflickr.com/"+sets[i].server+"/"+sets[i].primary+"_"+sets[i].secret+"_z.jpg";
        
         var a = $('<a/>').attr({

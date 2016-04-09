@@ -225,12 +225,15 @@ img {
   overflow:hidden;
   margin-bottom:20px;
   padding:0 10px;
-  max-height: 240px;
   .caption {
     pointer-events:none;
   }
   .caption h3{
     margin-top: 15%;
+  }
+  &-content {
+    background-size: cover;
+    height: 240px;
   }
 }
 
