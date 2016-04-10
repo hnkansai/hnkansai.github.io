@@ -212,12 +212,6 @@ img {
     font-size:18px;
     text-align:center;
   }
-  img {
-    border:1px solid #aaa;
-    box-shadow:1px 1px 8px #aaa;
-    -webkit-box-shadow:1px 1px 8px #aaa;
-    -mozkit-box-shadow:1px 1px 8px #aaa;
-  }
 }
 
 .gallery-img {
@@ -234,6 +228,10 @@ img {
   &-content {
     background-size: cover;
     height: 240px;
+    border:1px solid #aaa;
+    box-shadow:1px 1px 8px #aaa;
+    -webkit-box-shadow:1px 1px 8px #aaa;
+    -mozkit-box-shadow:1px 1px 8px #aaa;
   }
 }
 
