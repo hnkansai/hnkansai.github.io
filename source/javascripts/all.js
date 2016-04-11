@@ -366,15 +366,14 @@ http://www.apache.org/licenses/LICENSE-2.0
   var $root = $('html, body');
   $('a').click(function() {
     var href = $.attr(this, 'href');
-    $root.animate({
-        scrollTop: $(href).offset().top
-    }, 500, function () {
-        window.location.hash = href;
-    });
+    var offset = $(href).offset();
+    if (offset !== undefined) {
+      $root.animate({
+          scrollTop: $(href).offset().top
+      }, 500, function () {
+          window.location.hash = href;
+      });
+    }
     return false;
   });
 });
-
-
-
-
