@@ -61,6 +61,9 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
+    middleman-autoprefixer (2.6.1)
+      autoprefixer-rails (~> 6.0.1)
+      middleman-core (>= 3.3.3)
     middleman-core (3.4.0)
       activesupport (~> 4.1)
       bundler (~> 1.1)
@@ -137,6 +140,10 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   middleman
+  middleman-autoprefixer
   middleman-deploy
   middleman-gh-pages
   ruby18_source_location
+
+BUNDLED WITH
+   1.11.2

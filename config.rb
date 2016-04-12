@@ -56,6 +56,9 @@ set :images_dir, 'images'
 
 # automatically reloads the site in the browser when you make changes to it.
 #activate :livereload
+  
+# Automatically add vendor prefixes to CSS
+activate :autoprefixer
 
 # Build-specific configuration
 configure :build do

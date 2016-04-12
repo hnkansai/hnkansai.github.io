@@ -9,6 +9,8 @@ gem "middleman-deploy"
 
 gem 'middleman-gh-pages'
 
+gem 'middleman-autoprefixer'
+
 gem "bootstrap-sass", :require => false
 
 # Cross-templating language block fix for Ruby 1.8

@@ -25,14 +25,15 @@ section {
   clear:both;
   padding-top:1em;
   padding-bottom:1em;
-    h2{
-      font-weight: bold;
-      font-size: 2.5em;
-      letter-spacing: -1px;
-      padding: 1em 0 1em 0;
-      text-align:center;
-      color:rgb(226, 102, 0);
-    }
+  
+  h2{
+    font-weight: bold;
+    font-size: 2.5em;
+    letter-spacing: -1px;
+    padding: 1em 0 1em 0;
+    text-align:center;
+    color:rgb(226, 102, 0);
+  }
 }
 
 img {
@@ -78,13 +79,7 @@ img {
   bottom:0;
   display:none;
   background-color: rgba(0,0,0,.75);  
-  
-
-  /* For IE 5-7 */  
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);  
-  /* For IE 8 */  
-  -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  
-  }  
+}
 
 .caption h3 {
   color:#fff;
@@ -130,8 +125,6 @@ img {
     top:0;
     z-index: 5;
     border-radius:0;
-    moz-border-radius:0;
-    -webkit-border-radius:0;
 } 
 
 .navbar-collapse {
@@ -230,8 +223,6 @@ img {
     height: 240px;
     border:1px solid #aaa;
     box-shadow:1px 1px 8px #aaa;
-    -webkit-box-shadow:1px 1px 8px #aaa;
-    -mozkit-box-shadow:1px 1px 8px #aaa;
   }
 }
 
@@ -293,8 +284,6 @@ img {
   position:relative;
     img {
       box-shadow: 1px 1px 6px #888;
-      -webkit-box-shadow: 1px 1px 6px #888;
-      -moz-box-shadow: 1px 1px 6px #888;
       padding:0;
       margin:0;
     }
@@ -302,8 +291,6 @@ img {
 .thumbnail {
   border:1px solid #444;
   box-shadow: 1px 1px 3px #aaa;
-  -webkit-box-shadow: 1px 1px 3px #aaa;
-  -moz-box-shadow: 1px 1px 3px #aaa;
   padding:0;
 }
 
@@ -313,8 +300,6 @@ img {
   overflow: auto;
   border:1px solid #444;
   box-shadow: 2px 2px 8px #888;
-  -webkit-box-shadow: 2px 2px 8px #888;
-  -moz-box-shadow: 2px 2px 8px #888;
 }
 
 .yt-title {
@@ -368,8 +353,6 @@ img {
       display:block;
       border:1px solid #aaa;
        box-shadow:1px 1px 8px #aaa;
-      -webkit-box-shadow:1px 1px 8px #aaa;
-      -mozkit-box-shadow:1px 1px 8px #aaa;
     }
 }
 
