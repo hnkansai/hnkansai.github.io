@@ -53,19 +53,41 @@ $(document).ready(function(){
 
   var date = new Date();
   var today = date.toISOString(); 
-  //Doorkeeper API Call to fetch current events
+
+  //Doorkeeper API Call to fetch current events (not used anymore, see below)
+
+  // $.ajax({
+  //   type: "GET",
+  //   url: "https://api.doorkeeper.jp/groups/hnkansai/events?&since="+today,
+  //   data: {},
+  //   dataType: "jsonp",
+  //   crossDomain: true,
+  //   success: function(data){
+  //     if(data && data.length){
+  //       // var totalEvents = data.length;
+  //       var nextEvent = data[0].event;
+  //       var formattedDate = formatDate(new Date(nextEvent.starts_at));
+  //       $('#events').append('<li id = "english-details">Next Event: </li><li><a href="https://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a></li>');
+  //     }
+  //   }
+  // });
+
+  //Meetup API Call to fetch current events
+
   $.ajax({
     type: "GET",
-    url: "https://api.doorkeeper.jp/groups/hnkansai/events?&since="+today,
+    url: "https://api.meetup.com/Hacker-News-Kansai/events?&sign=true&photo-host=public&page=20",
     data: {},
     dataType: "jsonp",
     crossDomain: true,
-    success: function(data){
-      if(data && data.length){
-        // var totalEvents = data.length;
-        var nextEvent = data[0].event;
-        var formattedDate = formatDate(new Date(nextEvent.starts_at));
-        $('#events').append('<li id = "english-details">Next Event: </li><li><a href="https://hnkansai.doorkeeper.jp/events/'+nextEvent.id +'">'+nextEvent.title + ", " + formattedDate+'</a></li>');
+    success: function(result){
+      if(result.data && result.data.length){
+        var nextEvent = result.data[0];
+        var formattedDate = formatDate(new Date(nextEvent.time));
+        $('#events').append(`
+          <li id = "english-details">Next Event: </li>
+          <li><a href="${nextEvent.link}">${nextEvent.name}, ${formattedDate}</a></li>
+        `);
       }
     }
   });
