@@ -144,6 +144,3 @@ DEPENDENCIES
   middleman-deploy
   middleman-gh-pages
   ruby18_source_location
-
-BUNDLED WITH
-   1.11.2
