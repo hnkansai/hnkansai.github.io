@@ -1,3 +1,4 @@
+/* global $ */
 //= require fancybox.js
 //= require fancybox-media.js
 //= require modernizr-2.6.2-respond-1.1.0.min.js
@@ -84,10 +85,10 @@ $(document).ready(function(){
       if(result.data && result.data.length){
         var nextEvent = result.data[0];
         var formattedDate = formatDate(new Date(nextEvent.time));
-        $('#events').append(`
-          <li id = "english-details">Next Event: </li>
-          <li><a href="${nextEvent.link}">${nextEvent.name}, ${formattedDate}</a></li>
-        `);
+        $('#events').append(
+          '<li id = "english-details">Next Event: </li>' +
+          '<li><a href="' + nextEvent.link + '">' + nextEvent.name + ', ' + formattedDate + '</a></li>'
+        );
       }
     }
   });
