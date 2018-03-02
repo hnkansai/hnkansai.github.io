@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     activesupport (4.2.4)
       i18n (~> 0.7)
@@ -144,3 +144,6 @@ DEPENDENCIES
   middleman-deploy
   middleman-gh-pages
   ruby18_source_location
+
+BUNDLED WITH
+   1.16.1
